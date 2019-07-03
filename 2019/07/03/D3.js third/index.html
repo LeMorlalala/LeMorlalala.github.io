@@ -1,0 +1,504 @@
+<!--
+	作者：Sariay
+	时间：2018-09-25
+	描述：There may be a bug, but don't worry, QiLing(器灵) says that it can work normally!
+-->
+
+
+	<!DOCTYPE html>
+	<html>
+		
+
+<head><meta name="generator" content="Hexo 3.9.0">
+	<title>D3.js入门的简单例子</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-title" content="Amaze UI">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="大兰兰">
+    <meta name="keywords" content>
+    <meta name="description" content>
+   	<!-- css -->
+	<link rel="stylesheet" href="/css/style.css">
+
+	<!-- favicon -->
+	<link href="/img/favicon.ico" rel="Shortcut Icon" type="image/ico">
+	
+	<!-- font-awesome -->
+	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+	<body>	
+		<!--Preloader-->
+<div id="preloader">
+	<div id="status">
+		<img alt="PRELOADER" src="/img/logo.png">
+	</div>
+</div>
+<!--Preloader end-->
+
+<!-- header -->
+
+	<header id="header-bg-1" style="background-image: url( /img/3.jpg );">	
+
+	
+		<div id="cd-logo"><a href="/"><img src="/img/logo.png" alt="Logo"></a></div>
+	
+	
+	<!-- motto or description -->
+		
+ 		<p class="motto"></p>
+	
+	
+	<!-- current page name or title -->
+	
+		
+		
+			
+			<p class=page-name>当前文章&nbsp;:&nbsp;《D3.js入门的简单例子》</p>
+			
+		
+	
+	
+	<!-- others: such as change-bg, time... -->
+	<p class="page-name-other">
+		7/3/2019 
+		<style type="text/css">
+	header:after {
+		content: '';
+		position: relative;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: #222222;
+		opacity: .5;
+		z-index: -1;
+	}
+	
+	.change-header-bg{
+		font-style: normal;
+	}
+	.change-header-bg i{
+		text-align: center;
+		cursor: pointer;
+		pointer-events: bounding-box;
+	}
+	@media(max-width:512px) {
+		.change-header-bg {
+			display: none;
+			visibility: hidden;
+		}
+	}
+	
+</style>
+
+<script type="text/javascript">
+	function changeHeaderBg(){
+		var random_bg = Math.floor(Math.random() * 109 + 1);
+		var bg = 'url(https://XXX-youname-XXX.github.io/Random-img/' + random_bg + '.jpg)';
+		$("#header-bg-2").css("background-image", bg);
+	}
+</script>
+
+<span class="change-header-bg">
+	——&nbsp;<i  class="fa fa-camera-retro" onclick="changeHeaderBg()"></i>	
+</span>
+	</p>		
+</header>
+
+<!-- nav -->
+<div id="cd-nav">
+	<a href="#0" title="menu" class="cd-nav-trigger"><span></span></a>
+
+	<nav id="cd-main-nav">
+		<ul>
+			
+      		<li class="fa fa-/">
+           		<a href="/" title="主页">主页</a>	
+      		</li>
+    		
+      		<li class="fa fa-/archives">
+           		<a href="/archives" title="归档">归档</a>	
+      		</li>
+    		
+      		<li class="fa fa-/categories">
+           		<a href="/categories" title="分类">分类</a>	
+      		</li>
+    		
+      		<li class="fa fa-/tags">
+           		<a href="/tags" title="标签">标签</a>	
+      		</li>
+    		
+      		<li class="fa fa-/about">
+           		<a href="/about" title="关于">关于</a>	
+      		</li>
+    		
+      		<li class="fa fa-/gallery">
+           		<a href="/gallery" title="相册">相册</a>	
+      		</li>
+    		
+    		
+        	
+		</ul>
+	</nav>
+</div>
+
+		<!--main-->
+		<main> 
+		<div class="page-container">
+		<!-- content srart -->
+<div class="am-g am-g-fixed blog-fixed blog-content">
+	<div class="am-u-md-8 am-u-sm-12">
+
+		<article class="am-article blog-article-p">
+
+			<div class="am-article-hd">
+				
+
+
+				<h1 class="am-article-title blog-text-center">
+					
+					
+	
+		<a href="/2019/07/03/D3.js third/" itemprop="url">		
+			D3.js入门的简单例子		
+		</a>
+	
+
+				</h1>
+
+				<p class="am-article-meta blog-text-center">
+					<span>
+						<i class="fa fa-clock-o"></i> 
+						<a href="/2019/07/03/D3.js third/" itemprop="url">
+	<time datetime="2019-07-03T06:36:31.839Z" itemprop="datePublished">
+  		2019-07-03
+  </time>
+</a>    
+&nbsp;
+					</span>
+					
+					<span>						
+						
+							<i class="fa fa-tags"></i>
+							
+								<a href="#tags" title="tags" rel="3">tags</a>&nbsp;
+													 											
+						
+					</span>
+				</p>
+			</div>
+
+			<div class="am-article-bd">
+				<div class="content" id="post-content">
+					
+						<h1 id="D3-js-基础"><a href="#D3-js-基础" class="headerlink" title="D3.js 基础"></a>D3.js 基础</h1><h2 id="对元素的数据的绑定"><a href="#对元素的数据的绑定" class="headerlink" title="对元素的数据的绑定"></a>对元素的数据的绑定</h2><blockquote>
+<p>数据绑定</p>
+</blockquote>
+<p>d3 能够将数据绑定到 dom 上，一般是通过以下两个函数来绑定数据</p>
+<p><code>selection.data(Array)</code>:绑定一个数组到选择集上，数组各项值分别于选择器的各元素绑定</p>
+<p><code>selection.datum()</code>:绑定一个数据到选择集上</p>
+<p>在日常使用上，data 更常用，下面是一个简单的使用例子</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> dataset = [<span class="string">"dogs"</span>, <span class="string">"cats"</span>, <span class="string">"rabbits"</span>];</span><br><span class="line">d3.select(<span class="string">"body"</span>)</span><br><span class="line">  .selectAll(<span class="string">"p"</span>)</span><br><span class="line">  .data(dataset)</span><br><span class="line">  .enter()</span><br><span class="line">  .append(<span class="string">"p"</span>)</span><br><span class="line">  .text(<span class="function"><span class="params">d</span> =&gt;</span> d);</span><br></pre></td></tr></table></figure>
+<p>上述例子中使用到了 enter(),首先，要绑定一个长度是 3 的数组到 p 元素的选择集上，enter 则表示，若之前不存在 p 元素，则 d3 创建空的元素与数据对应。另外还有两个概念，update 和 exit,下面的例子可以比较清楚地了解 enter,update,exit 的区别。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>apple<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>orange<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>grape<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//js</span></span><br><span class="line"><span class="comment">//enter和update</span></span><br><span class="line"><span class="keyword">var</span> dataset = [<span class="string">"cats"</span>, <span class="string">"dogs"</span>, <span class="string">"tigers"</span>, <span class="string">"rabbits "</span>];</span><br><span class="line"><span class="keyword">var</span> update = d3</span><br><span class="line">  .select(<span class="string">"body"</span>)</span><br><span class="line">  .selectAll(<span class="string">"p"</span>)</span><br><span class="line">  .data(dataset);</span><br><span class="line">update.text(<span class="function"><span class="params">d</span> =&gt;</span> <span class="string">"update "</span> + d);</span><br><span class="line"><span class="keyword">var</span> enter = update.enter();</span><br><span class="line">enter.append(<span class="string">"p"</span>).text(<span class="function"><span class="params">d</span> =&gt;</span> <span class="string">"enter "</span> + d);</span><br><span class="line"><span class="comment">//exit</span></span><br><span class="line"><span class="keyword">var</span> dataset = [<span class="string">"cats"</span>];</span><br><span class="line"><span class="keyword">var</span> update = d3</span><br><span class="line">  .select(<span class="string">"body"</span>)</span><br><span class="line">  .selectAll(<span class="string">"p"</span>)</span><br><span class="line">  .data(dataset);</span><br><span class="line">update.text(<span class="function"><span class="params">d</span> =&gt;</span> <span class="string">"update "</span> + d);</span><br><span class="line"><span class="keyword">var</span> exit = update.exit();</span><br><span class="line">exit.remove();</span><br></pre></td></tr></table></figure>
+<p>若重画一个图表之前先把 svg 内元素删除，则不必考虑 update 的部分数据</p>
+<p>exit()一般的用途是 更新数据后，删除页面之前渲染 本次数据不包含的元素</p>
+<h2 id="简单的柱状图"><a href="#简单的柱状图" class="headerlink" title="简单的柱状图"></a>简单的柱状图</h2><p>当前使用的是 d3v4 版本</p>
+<blockquote>
+<p>定义数据</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义一个数组</span></span><br><span class="line"><span class="keyword">const</span> data = [</span><br><span class="line">  &#123; <span class="attr">category</span>: <span class="string">"aabxa"</span>, <span class="attr">value</span>: <span class="number">10</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">category</span>: <span class="string">"babxa"</span>, <span class="attr">value</span>: <span class="number">20</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">category</span>: <span class="string">"cabxa"</span>, <span class="attr">value</span>: <span class="number">30</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">category</span>: <span class="string">"dabxa"</span>, <span class="attr">value</span>: <span class="number">40</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">category</span>: <span class="string">"fabxa"</span>, <span class="attr">value</span>: <span class="number">15</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">category</span>: <span class="string">"eabxa"</span>, <span class="attr">value</span>: <span class="number">5</span> &#125;</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>定义比例尺</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> xScale = d3</span><br><span class="line">  .scaleBand()</span><br><span class="line">  .domain(data.map(<span class="function"><span class="params">d</span> =&gt;</span> d.category))</span><br><span class="line">  .range([padding.left, pos.width]);</span><br><span class="line"><span class="keyword">let</span> yScale = d3</span><br><span class="line">  .scaleLinear()</span><br><span class="line">  .domain([<span class="number">0</span>, d3.max(data, d =&gt; d.value) * <span class="number">1.08</span>])</span><br><span class="line">  .range([pos.height - padding.top, <span class="number">0</span>]);</span><br></pre></td></tr></table></figure>
+<p>x 轴使用<code>分段比例尺</code>，定义域可以是一组数据，x 轴根据数组的长度自动进行均分，其输出值为对应数组中的值，值域是左侧间距到 svg 的宽度</p>
+<p>y 轴使用<code>线性比例尺</code>，其中定义域的值可以表示为 x，值域的值可以表示为 y，其中的函数关系是 y=mx+b,定义域通常是 0 到传入数据的最大值，这边最大值*1.08 是希望 y 轴最高值 40 的展示在最高点偏下一些，则扩大了定义域。</p>
+<p>有一点需要注意的是，y 轴的值域和定义域是相反的。这是由于 y 轴的正方向是由上往下，当前比例尺的计算规则是，假设定义域是 x（图标的值），值域是 y，当 x 是 0 的时候，y 是当前画图区域的最大高度;当 x 是最大值时，y 是 0 。那么，假设在 x 轴最高点画一条水平线，调用 yScale 算出来的值其实可以理解为从水平线往下的距离，柱状图柱子的高度则可以设置为画图区域减去 yScale。</p>
+<blockquote>
+<p>定义坐标轴</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> xAxis = d3.axisBottom(xScale);</span><br><span class="line"><span class="keyword">let</span> yAxis = d3.axisLeft(yScale);</span><br></pre></td></tr></table></figure>
+<p>axisTop,axisRight,axisBottom,axisLeft 作用是构建一个刻度在上，右，下，左位置的坐标轴生成器。</p>
+<blockquote>
+<p>绘制 x,y 轴和柱子</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">svg</span><br><span class="line">  .append(<span class="string">"g"</span>)</span><br><span class="line">  .attr(<span class="string">"transform"</span>, <span class="string">"translate(0,"</span> + (pos.height - padding.top) + <span class="string">")"</span>)</span><br><span class="line">  .call(xAxis);</span><br><span class="line">svg</span><br><span class="line">  .append(<span class="string">"g"</span>)</span><br><span class="line">  .attr(<span class="string">"transform"</span>, <span class="string">"translate("</span> + padding.left + <span class="string">",0)"</span>)</span><br><span class="line">  .call(yAxis);</span><br><span class="line"><span class="keyword">let</span> columns = svg</span><br><span class="line">  .append(<span class="string">"g"</span>)</span><br><span class="line">  .attr(<span class="string">"class"</span>, <span class="string">"columns"</span>)</span><br><span class="line">  .attr(<span class="string">"transform"</span>, <span class="string">"translate("</span> + padding.left + <span class="string">",0)"</span>);</span><br><span class="line">columns</span><br><span class="line">  .selectAll(<span class="string">"rect"</span>)</span><br><span class="line">  .data(data)</span><br><span class="line">  .enter()</span><br><span class="line">  .append(<span class="string">"rect"</span>)</span><br><span class="line">  .attr(<span class="string">"x"</span>, d =&gt; xScale(d.category))</span><br><span class="line">  .attr(<span class="string">"y"</span>, d =&gt; yScale(d.value))</span><br><span class="line">  .attr(<span class="string">"width"</span>, pos.rectWidth)</span><br><span class="line">  .attr(<span class="string">"height"</span>, (d, i) =&gt; pos.height - padding.top - yScale(d.value))</span><br><span class="line">  .style(<span class="string">"fill"</span>, <span class="string">"#09c"</span>);</span><br></pre></td></tr></table></figure>
+<p><code>call</code> 方法表示为当前选择集指定对应的函数，当前为坐标轴生成器。</p>
+<h2 id="简单的饼图"><a href="#简单的饼图" class="headerlink" title="简单的饼图"></a>简单的饼图</h2><p>饼图数据沿用上面柱状图数据</p>
+<blockquote>
+<p>创建一个饼图生成器</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">pie = d3</span><br><span class="line">  .pie()</span><br><span class="line">  .value(<span class="function"><span class="params">d</span> =&gt;</span> d.value)</span><br><span class="line">  <span class="comment">//sortValue不改变画图的顺序，只改变画图的startEngle和endEngle</span></span><br><span class="line">  <span class="comment">// .sortValues((a, b) =&gt; &#123;</span></span><br><span class="line">  <span class="comment">//   return b.value - a.value;</span></span><br><span class="line">  <span class="comment">// &#125;)</span></span><br><span class="line">  .startAngle(<span class="number">0</span>)</span><br><span class="line">  .endAngle(<span class="number">2</span> * <span class="built_in">Math</span>.PI);</span><br></pre></td></tr></table></figure>
+<p>pie 根据指定的 data 数组生成一组对象数组，其中每个对象包含每个传入的数据经过计算后的角度信息,包括起始角度，结束角度等。 也包含额外的 argements,比如上述的 category 信息。对象数组的长度和传入的 data 数组长度一致，并且一一对应。</p>
+<p><code>value</code>指定当前弧对应的值</p>
+<p><code>startAngle endAngle</code>表示绘制整个饼图的起始角度和结束角度</p>
+<p><code>sortValues</code>根据上面设置的 value 字段，取值进行比较，不改变 index 及画图的顺序，只是改变弧的起始角度</p>
+<blockquote>
+<p>创建一个弧生成器</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">arc = d3</span><br><span class="line">  .arc()</span><br><span class="line">  .innerRadius(<span class="number">0</span>)</span><br><span class="line">  .outerRadius(pos.outerRadius);</span><br></pre></td></tr></table></figure>
+<p>弧生成器会根据数据的角度、半径等信息，返回一个 path 字符串。</p>
+<p><code>innerRadius outerRadius</code>表示饼图的内径和外径，若饼图大小需要平铺整个 svg,则可以取宽高之中较小的除 2 作为外半径</p>
+<p><code>arc.centroid(argements)</code>表示弧的中间点，方便于对饼图的 labels 进行定位。中间点大致被定义为(startAngle + endAngle)/2 和 (innerRadius + outerRadius) / 2，可以直接用于 translate 后方</p>
+<blockquote>
+<p>绘制饼图</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> color = d3.scaleOrdinal(d3.schemeCategory10);</span><br><span class="line"><span class="keyword">let</span> arcs = pieGroup</span><br><span class="line">  .selectAll(<span class="string">".arcs"</span>)</span><br><span class="line">  .data(pie(data))</span><br><span class="line">  .enter()</span><br><span class="line">  .append(<span class="string">"g"</span>)</span><br><span class="line">  .on(<span class="string">"mouseover"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123;</span><br><span class="line">    onMouseHandle(d3.select(<span class="keyword">this</span>), ...[<span class="number">0</span>, <span class="number">20</span>]);</span><br><span class="line">  &#125;)</span><br><span class="line">  .on(<span class="string">"mouseout"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123;</span><br><span class="line">    onMouseHandle(d3.select(<span class="keyword">this</span>), ...[<span class="number">20</span>, <span class="number">0</span>]);</span><br><span class="line">  &#125;);</span><br><span class="line">arcs</span><br><span class="line">  .append(<span class="string">"path"</span>)</span><br><span class="line">  .classed(<span class="string">"pie-arc"</span>, <span class="literal">true</span>)</span><br><span class="line">  .attr(<span class="string">"d"</span>, arc)</span><br><span class="line">  .style(<span class="string">"fill"</span>, (d, i) =&gt; color(i));</span><br></pre></td></tr></table></figure>
+<p><code>d3.schemeCategory10</code>实质上是 d3 提供的一个颜色数组，包含十个分类颜色的数组，其他还有 d3.schemeDark2,d3.schemePaired, d3.schemeSet3 等参见官方 api,一般来说都是自己定义颜色数组</p>
+<p><code>classed</code>第一个参数传要设置的 class 名称，第二个参数可以是布尔型的 true 或者 false,也可以传入 fn,判断之后返回 true 或者 false</p>
+<p>添加 path 标签，d 属性的值可以传入弧生成器或者直线生成器等 fn,自动生成 path 数据，也可以自行通过<code>M L</code>中间加点绘制</p>
+<blockquote>
+<p>mouse 事件</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">onMouseHandle</span>(<span class="params">target, a, b</span>) </span>&#123;</span><br><span class="line">  target</span><br><span class="line">    .select(<span class="string">"path"</span>)</span><br><span class="line">    .transition()</span><br><span class="line">    .delay(<span class="number">100</span>)</span><br><span class="line">    .attrTween(<span class="string">"d"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">let</span> i = d3.interpolate(a, b);</span><br><span class="line">      <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">t</span>) </span>&#123;</span><br><span class="line">        arc.outerRadius(i(t) + pos.outerRadius);</span><br><span class="line">        <span class="keyword">return</span> arc(d);</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;);</span><br><span class="line">  <span class="comment">// if (a === 0) &#123;</span></span><br><span class="line">  <span class="comment">//   pieGroup.selectAll(".pie-arc").style("fill-opacity", 0.3);</span></span><br><span class="line">  <span class="comment">//   target.select(".pie-arc").style("fill-opacity", 1);</span></span><br><span class="line">  <span class="comment">// &#125; else &#123;</span></span><br><span class="line">  <span class="comment">//   pieGroup.selectAll(".pie-arc").style("fill-opacity", 1);</span></span><br><span class="line">  <span class="comment">// &#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上述写的是鼠标 mouseover 和 mouseout 的动画效果，主要是为了强调当前选择的弧</p>
+<p><code>transition</code>表示为指定的选择集增加一个过渡,即使用动画，后面可以设置 duration(100),表示过渡到指定状态的时间，以毫秒为单位;delay(100),表示过渡的延时时间（毫</p>
+<p><code>attrTween(name[,factory])</code>表示使用自定义插值器在给定的属性之间过渡，官网解释是：如果 factory 不为 null,factory 会为每个选中的元素进行调用，并依次传递当前元素绑定的数据 d 以及索引 i, 函数内部 this 指向当前 DOM 元素。返回的插值器会在过渡过程中的每一帧进行调用，并依次传入 eased(缓动) 时间 t, 通常情况下在 [0, 1] 范围内。最后插值器返回的值将会被用来设置为当前属性值。例如：a 是 0, b 是 20, 当 t=0.5 的时候，值为 10</p>
+<p>在 red 和 blue 之间进行插值：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">transition.attrTween(<span class="string">"fill"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> d3.interpolateRgb(<span class="string">"red"</span>, <span class="string">"blue"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>上述代码是自定义了一个插值器，通过半径增量加上原半径，达到指定弧放大的效果</p>
+
+					
+				</div>
+			</div>
+		</article>
+
+		<ul class="am-pagination">
+    
+	
+		<li class="am-pagination-next">
+		<a class="pull-right" href="/2019/07/03/D3.js secong/" title="D3.js数据可视化二">
+			下一篇 &raquo;
+		</a>
+		</li>
+	 
+ </ul>
+        
+
+		<div class="theme-annie-comment-button-container">
+	<button id="annie-comment-button" class="theme-annie-comment-button" onclick="Annie_Comment()">
+		加载评论
+		<!--加载评论-->
+	</button>
+</div>
+
+<div id="annie-comment-container" class="theme-annie-comment-main-container">
+
+	
+		
+			<!-- comment valine -->
+			<!-- show valine comment -->
+<div id="valineComment" class="comment"></div>
+
+<!-- valine`s js & css -->
+<script>
+	window.jQuery || document.write('<script src="/js/jquery-2.1.1.min.js"><\/script>')
+</script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/js/valine.min.js"></script>
+<link rel="stylesheet" href="/css/comment.css">
+
+<script>
+	var checkExistComment = setInterval(function() {
+		if( $('#valineComment').length ) {
+			new Valine({
+				// AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+				av: AV,
+				//使用id寻找div元素（使用class可能找不到）
+				el: '#valineComment',
+				emoticon_url: 'https://cloud.panjunwen.com/alu',
+				emoticon_list: ["吐.png", "期待.png", "高兴.png", "吐血倒地.png", "哭泣.png", "欢呼.png"],
+				app_id: "3333....", //获取APP ID
+				app_key: "3333......", //获取APP KEY
+				placeholder: "no any!", //评论框占位提示文字        			
+			});
+			clearInterval(checkExistComment);
+		}
+	}, 100);
+</script>
+		
+	
+
+</div>
+
+<script type="text/javascript">
+	/* Show Comment */
+	var Annie_Comment = function() {
+		function Show_Hidden(obj) {
+			obj.style.display = 'block';
+		}
+		
+		//var obutton = $('#annie-comment-button');
+		//var obutton = $('#annie-comment-container');
+		var obutton = document.getElementById("annie-comment-button" || "0");
+		var odiv = document.getElementById("annie-comment-container");
+		if( 'obutton' ) {
+			obutton.onclick = function() {
+				Show_Hidden(odiv);
+				$("#annie-comment-button").css("display", 'none');
+				return false;
+			}
+		}
+	};
+
+	(function Annie_Init() {
+		Annie_Comment();
+	})();
+</script>
+		
+		<!--
+	时间：2018-09-24
+	描述：The TOC module refers to 'https://github.com/codefine/hexo-theme-mellow', include toc.ejs、toc.js、toc.css. All rights reserved by codefine. 
+-->
+
+	
+		<aside class="post-widget">
+			<nav class="post-toc-wrap" id="post-toc">
+				
+					<strong>文章目录</strong>
+				
+				
+				<!--toc(post.content)-->
+				<ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#D3-js-基础"><span class="post-toc-text">D3.js 基础</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#对元素的数据的绑定"><span class="post-toc-text">对元素的数据的绑定</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#简单的柱状图"><span class="post-toc-text">简单的柱状图</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#简单的饼图"><span class="post-toc-text">简单的饼图</span></a></li></ol></li></ol>
+			</nav>
+			<div class="post-toc-bar"><div>
+		</aside>
+	
+
+	</div>
+</div>
+		</div>
+		</main>
+		
+		<!--footer-->
+		<footer>
+	<div class="blog-text-center">
+		<div class="theme-annie-social">
+				
+				
+					<a href="http://github.com/" title="Github" target="_blank"><i class="fa fa-github"></i>&nbsp;</a>
+					
+				
+					<a href="http://github.com/" title="Weibo" target="_blank"><i class="fa fa-weibo"></i>&nbsp;</a>
+				
+				
+					<a href="http://github.com/" title="Email" target="_blank"><i class="fa fa-envelope-o"></i>&nbsp;</a>
+					
+				
+					<a href="http://github.com/" title="QQ" target="_blank"><i class="fa fa-qq"></i>&nbsp;</a>
+					
+				
+					<a href="http://github.com/" title="Twitter" target="_blank"><i class="fa fa-twitter"></i>&nbsp;</a>
+						
+				
+		</div>
+	</div>
+
+	<div  class="blog-text-center">
+		<div class="theme-annie-copyright">
+			
+				&copy; 2018 - 2019, content by 大兰兰. All Rights Reserved.			       	
+			
+		</div>
+	</div>
+
+	<div class="blog-text-center">
+		<div class="theme-annie-copyright">
+			<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.		
+		</div>
+	</div>
+</footer>
+		<!-- <script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script> -->
+
+<script>
+	window.jQuery || document.write('<script src="/js/jquery-2.1.1.min.js"><\/script>')
+</script>
+
+<style>
+	.motto {
+		color: #000000;
+		font-size: 20px;
+		margin: 100px 25% 0;
+		width: 50%;
+		line-height: 1.4;
+		font-family:"KaiTi", "STXingkai", "Source Sans Pro", "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif;
+		text-align: center;
+	}
+	@media(max-width: 890px) {
+		.motto {	
+			margin: 100px 10% 0;
+			width: 80%;
+		}
+	}
+	@media(max-width: 890px) {
+		.motto {
+			margin: 100px 5% 0;
+			width: 90%;
+		}
+	}
+</style>
+
+
+	<script src="/js/motto.js"></script>
+	<script type="text/javascript">
+		$(".motto").html(getMingYanContent());
+	</script>	
+
+
+
+
+
+
+
+	<script type="text/javascript" src="/js/toc.js"></script>
+
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript">
+	//generate a random img that pre_name 'from 0 to 110'
+	var random_bg = Math.floor(Math.random() * 109 + 1);
+
+	//var bg = 'url(/img/random/' + random_bg + '.jpg)';		
+	var bg = 'url(https://XXX-youname-XXX.github.io/Random-img/' + random_bg + '.jpg)';
+
+	$("#header-bg-2").css("background-image", bg);
+</script>
+		
+		<!--back to top-->
+        <style type="text/css">
+	#totop {
+		background: white;
+		border-radius: 50%;
+		position: fixed;
+		right: 5.4%;
+		bottom: 80px;
+		cursor: pointer;
+	}
+	
+	#totop a {
+		color: #474747;
+		background-color: transparent;
+		padding: 10px;
+		text-decoration: none;
+	}
+	
+	@media(max-width:512px) {
+		#totop {
+			display: none;
+			visibility: hidden;
+		}
+	}
+</style>
+
+
+	<div id="totop">
+  		<a href="javascript:;" class="fa fa-arrow-up"></a>
+	</div>
+
+	<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","tagMode":false,"model":{"scale":1,"jsonPath":"live2d-widget-model-hijiki"},"display":{"superSample":2,"position":"right","width":160,"height":320},"mobile":{"show":true},"react":{"opacityDefault":1,"opacityOnHover":1},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/"});</script></body>
+	</html>
+
