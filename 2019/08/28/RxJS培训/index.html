@@ -1,0 +1,531 @@
+<!--
+	作者：Sariay
+	时间：2018-09-25
+	描述：There may be a bug, but don't worry, QiLing(器灵) says that it can work normally!
+-->
+
+
+	<!DOCTYPE html>
+	<html>
+		
+
+<head><meta name="generator" content="Hexo 3.9.0">
+	<title>Rxjs</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-title" content="Amaze UI">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="大兰兰">
+    <meta name="keywords" content>
+    <meta name="description" content>
+   	<!-- css -->
+	<link rel="stylesheet" href="/css/style.css">
+
+	<!-- favicon -->
+	<link href="/img/favicon.ico" rel="Shortcut Icon" type="image/ico">
+	
+	<!-- font-awesome -->
+	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+	<body>	
+		<!--Preloader-->
+<div id="preloader">
+	<div id="status">
+		<img alt="PRELOADER" src="/img/logo.png">
+	</div>
+</div>
+<!--Preloader end-->
+
+<!-- header -->
+
+	<header id="header-bg-1" style="background-image: url( /img/head.jpg );">	
+
+	
+		<div id="cd-logo"><a href="/"><img src="/img/logo.png" alt="Logo"></a></div>
+	
+	
+	<!-- motto or description -->
+		
+ 		<p class="motto"></p>
+	
+	
+	<!-- current page name or title -->
+	
+		
+		
+			
+			<p class=page-name>当前文章&nbsp;:&nbsp;《Rxjs》</p>
+			
+		
+	
+	
+	<!-- others: such as change-bg, time... -->
+	<p class="page-name-other">
+		8/28/2019 
+		<style type="text/css">
+	header:after {
+		content: '';
+		position: relative;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: #222222;
+		opacity: .5;
+		z-index: -1;
+	}
+	
+	.change-header-bg{
+		font-style: normal;
+	}
+	.change-header-bg i{
+		text-align: center;
+		cursor: pointer;
+		pointer-events: bounding-box;
+	}
+	@media(max-width:512px) {
+		.change-header-bg {
+			display: none;
+			visibility: hidden;
+		}
+	}
+	
+</style>
+
+<script type="text/javascript">
+	function changeHeaderBg(){
+		var random_bg = Math.floor(Math.random() * 109 + 1);
+		var bg = 'url(https://XXX-youname-XXX.github.io/Random-img/' + random_bg + '.jpg)';
+		$("#header-bg-2").css("background-image", bg);
+	}
+</script>
+
+<span class="change-header-bg">
+	——&nbsp;<i  class="fa fa-camera-retro" onclick="changeHeaderBg()"></i>	
+</span>
+	</p>		
+</header>
+
+<!-- nav -->
+<div id="cd-nav">
+	<a href="#0" title="menu" class="cd-nav-trigger"><span></span></a>
+
+	<nav id="cd-main-nav">
+		<ul>
+			
+      		<li class="fa fa-/">
+           		<a href="/" title="主页">主页</a>	
+      		</li>
+    		
+      		<li class="fa fa-/archives">
+           		<a href="/archives" title="归档">归档</a>	
+      		</li>
+    		
+      		<li class="fa fa-/categories">
+           		<a href="/categories" title="分类">分类</a>	
+      		</li>
+    		
+      		<li class="fa fa-/tags">
+           		<a href="/tags" title="标签">标签</a>	
+      		</li>
+    		
+      		<li class="fa fa-/about">
+           		<a href="/about" title="关于">关于</a>	
+      		</li>
+    		
+      		<li class="fa fa-/gallery">
+           		<a href="/gallery" title="相册">相册</a>	
+      		</li>
+    		
+    		
+        	
+		</ul>
+	</nav>
+</div>
+
+		<!--main-->
+		<main> 
+		<div class="page-container">
+		<!-- content srart -->
+<div class="am-g am-g-fixed blog-fixed blog-content">
+	<div class="am-u-md-8 am-u-sm-12">
+
+		<article class="am-article blog-article-p">
+
+			<div class="am-article-hd">
+				
+
+
+				<h1 class="am-article-title blog-text-center">
+					
+					
+	
+		<a href="/2019/08/28/RxJS培训/" itemprop="url">		
+			Rxjs		
+		</a>
+	
+
+				</h1>
+
+				<p class="am-article-meta blog-text-center">
+					<span>
+						<i class="fa fa-clock-o"></i> 
+						<a href="/2019/08/28/RxJS培训/" itemprop="url">
+	<time datetime="2019-08-28T04:43:03.750Z" itemprop="datePublished">
+  		2019-08-28
+  </time>
+</a>    
+&nbsp;
+					</span>
+					
+					<span>						
+						
+							<i class="fa fa-tags"></i>
+							
+								<a href="#Rxjs" title="Rxjs" rel="1">Rxjs</a>&nbsp;
+													 											
+						
+					</span>
+				</p>
+			</div>
+
+			<div class="am-article-bd">
+				<div class="content" id="post-content">
+					
+						<h1 id="RxJS"><a href="#RxJS" class="headerlink" title="RxJS"></a>RxJS</h1><h2 id="1-RxJS-是什么？"><a href="#1-RxJS-是什么？" class="headerlink" title="1. RxJS 是什么？"></a>1. RxJS 是什么？</h2><p><em>RxJS 是用于 JavaScript 的 ReactiveX 库，RxJS 是 Observables 的响应式编程库，它使编写异步或基于回调的代码更容易</em></p>
+<p>从这个官方描述来看，功能很明显，使得编写异步或者基于回调的代码更容易。<br>既然是方便编写异步代码的，没有 rxjs 的异步代码是什么样的呢?</p>
+<hr>
+<h2 id="2-编写异步或回调的代码"><a href="#2-编写异步或回调的代码" class="headerlink" title="2. 编写异步或回调的代码"></a>2. 编写异步或回调的代码</h2><p>异步编程是相对于同步的编程方式，下面就用一个小例子，来介绍几种异步编码方式。<br>例子功能描述：当前有一个 names.txt 文件，该文件中存放了下一个要打开的文件的文件名(a.txt)，a.txt 中又存放了最终想要的文件名，该文件名中存放数据。<br>目录结构如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">test.js     //脚本程序</span><br><span class="line">names.txt  // 内容 a.txt</span><br><span class="line">/file</span><br><span class="line">    a.txt   //内容 b.txt</span><br><span class="line">    b.txt   //内容 终于等到你！</span><br></pre></td></tr></table></figure>
+<h3 id="2-1-基本的异步回调的代码"><a href="#2-1-基本的异步回调的代码" class="headerlink" title="2.1 基本的异步回调的代码"></a>2.1 基本的异步回调的代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">"fs"</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">"path"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> filePath = path.resolve(__dirname, <span class="string">"names.txt"</span>);</span><br><span class="line"></span><br><span class="line">fs.readFile(filePath, (err, data) =&gt; &#123;</span><br><span class="line">  <span class="keyword">if</span> (err) <span class="built_in">console</span>.log(err);</span><br><span class="line">  <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> firstFile = data.toString();</span><br><span class="line">    fs.readFile(path.resolve(__dirname, <span class="string">"./file"</span>, firstFile), (err, data) =&gt; &#123;</span><br><span class="line">      <span class="keyword">if</span> (err) <span class="built_in">console</span>.log(err);</span><br><span class="line">      <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> secondFile = data.toString();</span><br><span class="line">        fs.readFile(path.resolve(__dirname, <span class="string">"./file"</span>, secondFile), (err, data) =&gt; &#123;</span><br><span class="line">          <span class="keyword">if</span> (err) <span class="built_in">console</span>.log(err);</span><br><span class="line">          <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(data.toString());</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>可以看到，对于连续依赖的异步请求，代码变得非常难读并且需要在每一中间过程进行错误处理。如果嵌套过深，就会出现回调地狱的金字塔结构，并且难以调试和定位问题。</p>
+<h3 id="2-2-使用-Promise-来处理回调"><a href="#2-2-使用-Promise-来处理回调" class="headerlink" title="2.2 使用 Promise 来处理回调"></a>2.2 使用 Promise 来处理回调</h3><p>ES6 提供 promise 来处理异步逻辑，可以避免嵌套回调地狱问题。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">"fs"</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">"path"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> filePath = path.resolve(__dirname, <span class="string">"names.txt"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//高阶函数，接受一个函数，返回Promise化的函数。</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">promisify</span>(<span class="params">fn</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">...args</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">      fn(...args, (err, data) =&gt; &#123;</span><br><span class="line">        <span class="keyword">if</span> (err) reject(err);</span><br><span class="line">        resolve(data);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> readFilePromise = promisify(fs.readFile);</span><br><span class="line"></span><br><span class="line">readFilePromise(filePath)</span><br><span class="line">  .then(<span class="function"><span class="params">firstFile</span> =&gt;</span> readFilePromise(path.resolve(__dirname, <span class="string">"./file"</span>, firstFile)))</span><br><span class="line">  .then(<span class="function"><span class="params">secondFile</span> =&gt;</span> readFilePromise(path.resolve(__dirname, <span class="string">"./file"</span>, secondFile)))</span><br><span class="line">  .then(<span class="function"><span class="params">finalData</span> =&gt;</span> <span class="built_in">console</span>.log(finalData))</span><br><span class="line">  .catch(<span class="function"><span class="params">err</span> =&gt;</span> <span class="built_in">console</span>.log(err));</span><br></pre></td></tr></table></figure>
+<p>Promise 的<code>then()</code>,隐含着调用的时序，并且可以在一个 catch 中捕获错误，相比于 2.1 中的写法，好的很多。<br>但是呢，Promise 也有一些缺陷：</p>
+<ol>
+<li>Promise 无法处理数据源发出的不只一个值的情况，例如鼠标的移动或者文件中的字节流序列。</li>
+<li>Promise 也无法实现错误重试</li>
+<li>最重要的是，Promise 无法取消，Promise 是不可变的。</li>
+</ol>
+<h3 id="2-3-RxJS-的解决方案"><a href="#2-3-RxJS-的解决方案" class="headerlink" title="2.3 RxJS 的解决方案"></a>2.3 RxJS 的解决方案</h3><p>上面用 Rxjs 的方案来解决，代码如下:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">"fs"</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">"path"</span>);</span><br><span class="line"><span class="keyword">const</span> Rx = <span class="built_in">require</span>(<span class="string">"rxjs/Rx"</span>);</span><br><span class="line"><span class="keyword">let</span> filePath = path.resolve(__dirname, <span class="string">"names.txt"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> readFilePromise = <span class="function"><span class="keyword">function</span>(<span class="params">fileName</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    fs.readFile(fileName, (err, data) =&gt; &#123;</span><br><span class="line">      <span class="keyword">if</span> (err) reject(err);</span><br><span class="line">      <span class="keyword">else</span> resolve(data.toString());</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> x = Rx.Observable.fromPromise(readFilePromise(filePath))</span><br><span class="line">  .switchMap(<span class="function"><span class="params">firstFile</span> =&gt;</span></span><br><span class="line">    Rx.Observable.fromPromise(readFilePromise(path.resolve(__dirname, <span class="string">"./file"</span>, firstFile)))</span><br><span class="line">  )</span><br><span class="line">  .switchMap(<span class="function"><span class="params">secondFile</span> =&gt;</span></span><br><span class="line">    Rx.Observable.fromPromise(readFilePromise(path.resolve(__dirname, <span class="string">"./file"</span>, secondFile)))</span><br><span class="line">  )</span><br><span class="line">  .subscribe(&#123;</span><br><span class="line">    next: <span class="built_in">console</span>.log,</span><br><span class="line">    error: <span class="function"><span class="params">err</span> =&gt;</span> <span class="built_in">console</span>.log(err),</span><br><span class="line">    complete: <span class="function"><span class="params">_</span> =&gt;</span> &#123;&#125;</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+<p>貌似看起来和复杂，其实这个实例发挥不出 Rxjs 强大的效果，只是做个展示，Rxjs 能解决这个问题。<br>Rxjs 的哲学是函数式与响应式相结合。下面来介绍 Rxjs 的一些核心概念。</p>
+<hr>
+<h2 id="3-RxJS-的一些概念"><a href="#3-RxJS-的一些概念" class="headerlink" title="3. RxJS 的一些概念"></a>3. RxJS 的一些概念</h2><h3 id="3-1-一些预备知识"><a href="#3-1-一些预备知识" class="headerlink" title="3.1 一些预备知识"></a>3.1 一些预备知识</h3><p>RxJS 中的用到了一些设计模式的概念，主要是观察者模式和迭代器模式。先介绍这两种设计模式：</p>
+<h4 id="3-1-1-观察者模式"><a href="#3-1-1-观察者模式" class="headerlink" title="3.1.1 观察者模式"></a>3.1.1 观察者模式</h4><p>为一个软件开发者，提到 Observable，肯定会联想到观察者模式。<br>在观察者模式中，有一个称为 Producer(生产者)的对象，该对象维持一个所有订阅它的 listeners 列表。当调用 update 方法时，所有的 listeners 都会接受到通知。在大部分观察者模式的解释中，整个对象称为 Subject(主体)。但是为了区别于 RxJS 自己的 Subject 类型，就称它为 Producer。</p>
+<p>下面是观察者模式的简单实现:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Producer</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.listeners = [];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Producer.prototype.add = <span class="function"><span class="keyword">function</span>(<span class="params">listener</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.listeners.push(listener);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Producer.prototype.remove = <span class="function"><span class="keyword">function</span>(<span class="params">listener</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> index = <span class="keyword">this</span>.listeners.indexOf(listener);</span><br><span class="line">  <span class="keyword">this</span>.listeners.splice(index, <span class="number">1</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Producer.prototype.notify = <span class="function"><span class="keyword">function</span>(<span class="params">message</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.listeners.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">listener</span>) </span>&#123;</span><br><span class="line">    listener.update(message);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> listener1 = &#123;</span><br><span class="line">  update: <span class="function"><span class="keyword">function</span>(<span class="params">message</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"Listener 1 received:"</span>, message);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> listener2 = &#123;</span><br><span class="line">  update: <span class="function"><span class="keyword">function</span>(<span class="params">message</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"Listener 2 received:"</span>, message);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> notifier = <span class="keyword">new</span> Producer();</span><br><span class="line">notifier.add(listener1);</span><br><span class="line">notifier.add(listener2);</span><br><span class="line">notifier.notify(<span class="string">"Hello there!"</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="3-1-2-迭代器模式"><a href="#3-1-2-迭代器模式" class="headerlink" title="3.1.2 迭代器模式"></a>3.1.2 迭代器模式</h4><p>迭代器是一个对象，用来提供给 consumer(消费者)一种遍历它内容的简便方式，这就可以从 consumer 中隐藏具体遍历的实现。</p>
+<p>迭代器模式接口非常简单。只需要两个方法：next()方法获得序列中的下一个值，hasNext()方法检查是否还有值在序列中。<br>下面是迭代器模式的实现:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">iterateOnMultiples</span>(<span class="params">arr, divisor</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.cursor = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">this</span>.array = arr;</span><br><span class="line">  <span class="keyword">this</span>.divisor = divisor || <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">iterateOnMultiples.prototype.next = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">while</span> (<span class="keyword">this</span>.cursor &lt; <span class="keyword">this</span>.array.length) &#123;</span><br><span class="line">    <span class="keyword">var</span> value = <span class="keyword">this</span>.array[<span class="keyword">this</span>.cursor++];</span><br><span class="line">    <span class="keyword">if</span> (value % <span class="keyword">this</span>.divisor === <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> value;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">iterateOnMultiples.prototype.hasNext = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> cur = <span class="keyword">this</span>.cursor;</span><br><span class="line">  <span class="keyword">while</span> (cur &lt; <span class="keyword">this</span>.array.length) &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.array[cur++] % <span class="keyword">this</span>.divisor === <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> consumer = <span class="keyword">new</span> iterateOnMultiples([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>], <span class="number">3</span>);</span><br><span class="line"><span class="built_in">console</span>.log(consumer.next(), consumer.hasNext());</span><br><span class="line"><span class="built_in">console</span>.log(consumer.next(), consumer.hasNext());</span><br><span class="line"><span class="built_in">console</span>.log(consumer.next(), consumer.hasNext());</span><br></pre></td></tr></table></figure>
+<h3 id="3-2-流"><a href="#3-2-流" class="headerlink" title="3.2 流"></a>3.2 流</h3><p>RxJS 中的流，可以理解为任何具有值的数据点。例如，可以是整数字节、可以是网络请求等。<br>为了方便理解，我们使用伪代码<code>Stream</code>来表示一个流。<br>假设流中带有值为 42 的数据，那么可以用伪代码表示如下:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Stream(<span class="number">42</span>);</span><br></pre></td></tr></table></figure>
+<p>在 Rxjs 中，这个流意味着携带 42 的数据，但是什么都没有发生。当有一个 subscriber(或者称 observer)订阅了这个流，这个值 42 才会发射出来。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Stream(<span class="number">42</span>).subscribe(<span class="function"><span class="params">val</span> =&gt;</span> <span class="built_in">console</span>.log(val)); <span class="comment">//subscribe后才会输出42</span></span><br></pre></td></tr></table></figure>
+<p>这点与 Promise 不同.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">  resolve(<span class="number">42</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>Promise 的 42，在创建的时候，就会发射 42。状态已经变为<code>fulfilled</code>，但是在 Rxjs 中，创建 Stream(42)并不会发射出 42，只在 subscribe()订阅后，才会发射出 42。<br>这就是响应式的一种体现。</p>
+<p>流跟消费者之间形成了一个管道，可以在管道中操纵数据。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Stream([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>])</span><br><span class="line">  .filter(<span class="function"><span class="params">num</span> =&gt;</span> num % <span class="number">2</span> === <span class="number">0</span>)</span><br><span class="line">  .map(<span class="function"><span class="params">num</span> =&gt;</span> num * num)</span><br><span class="line">  .subscribe(<span class="function"><span class="params">val</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(val);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+<p><img src="stream.png" alt></p>
+<h3 id="3-3-Producers"><a href="#3-3-Producers" class="headerlink" title="3.3 Producers"></a>3.3 Producers</h3><p>Producers(生产者)是数据源。流必须拥有数据的产生者。数据源可以是任何类型的数据，可以是单一值、数组、鼠标点击，或者文件的字节流。<br>观察者模式定义 Producers 为 subject，但是为了区别于 RxJS 自己的 Subject 类型，就称它为 observables，意思是 something that’s able to be observed。<br>Observable 是负责推送消息，即触发并发射出值，但是并不进行值的处理。</p>
+<h3 id="3-4-Consumers"><a href="#3-4-Consumers" class="headerlink" title="3.4 Consumers"></a>3.4 Consumers</h3><p>有了 Producers，必须要有 consumer 来接收 producers 给的值，然后以一种特定的方式处理。当 consumer 开始监听 producer 生产的值，这就形成了一个流(stream)。并且这也是流推送值的开始点。对于 Consumer,也有一个别名称为 observer。</p>
+<p>流只从 producer 传递给 consumer，这个方向不可改变。</p>
+<h3 id="3-5-Data-Pipeline"><a href="#3-5-Data-Pipeline" class="headerlink" title="3.5 Data Pipeline"></a>3.5 Data Pipeline</h3><p>Rxjs 的一个核心优势在于，它可以操纵或者改变从 producers 传递给 sonsumer 的数据。这个过程中，Rxjs 提供了各种操作符来完成不同的功能。</p>
+<h3 id="3-6-time"><a href="#3-6-time" class="headerlink" title="3.6 time"></a>3.6 time</h3><p>时间是 Rxjs 中隐含的内容，流可以变快变慢，是个有序的过程。</p>
+<hr>
+<h2 id="4-创建-Observable"><a href="#4-创建-Observable" class="headerlink" title="4. 创建 Observable"></a>4. 创建 Observable</h2><p>创建数据流的操作符很多，这里只提几个常用的。</p>
+<ol>
+<li>create</li>
+</ol>
+<p>创建自定义的 observable，当观察者 Observer 订阅该 Observable 时，会执行指定的函数。<br>create 函数参数是一个函数 onSubscription。返回一个 Observable。该 Observable 会在 subscribe 订阅的时候，运行 onSubscription 函数。 onSubscription 函数接受一个 observer 对象，带值调用 next 会将该值发出给观察者。调用 complete 意味着该 Observable 结束了发出并且不会做任何事情了。 调用 error 意味着出现了错误，传给 error 的参数应该提供详细的错误信息。。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> observable = Rx.Observable.create(<span class="function"><span class="keyword">function</span>(<span class="params">observer</span>) </span>&#123;</span><br><span class="line">  observer.next(<span class="number">1</span>);</span><br><span class="line">  observer.next(<span class="number">2</span>);</span><br><span class="line">  observer.next(<span class="number">3</span>);</span><br><span class="line">  observer.complete();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> observer = &#123;</span><br><span class="line">  next: <span class="function"><span class="params">value</span> =&gt;</span> <span class="built_in">console</span>.log(value),</span><br><span class="line">  error: <span class="function"><span class="params">err</span> =&gt;</span> &#123;&#125;,</span><br><span class="line">  complete: <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">"this is the end"</span>)</span><br><span class="line">&#125;;</span><br><span class="line">observable.subscribe(observer);</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>fromPromise</li>
+</ol>
+<p>可以将 Promise 作为 RxJS 的 observable。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> computeFutureValue = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">  setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    resolve(<span class="number">42</span>);</span><br><span class="line">  &#125;, <span class="number">3000</span>);</span><br><span class="line">&#125;);</span><br><span class="line">Rx.Observable.fromPromise(computeFutureValue).subscribe(</span><br><span class="line">  val =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(val);</span><br><span class="line">  &#125;,</span><br><span class="line">  err =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`Error occurred: <span class="subst">$&#123;err&#125;</span>`</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">  () =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"All done!"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>fromEvent</li>
+</ol>
+<p>可以是 Dom 事件或者 node 的 eventEmitter 事件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Rx = <span class="built_in">require</span>(<span class="string">"rxjs/Rx"</span>);</span><br><span class="line"><span class="keyword">const</span> EventEmitter = <span class="built_in">require</span>(<span class="string">"events"</span>);</span><br><span class="line"><span class="keyword">const</span> emitter = <span class="keyword">new</span> EventEmitter();</span><br><span class="line"><span class="keyword">const</span> source$ = Rx.Observable.fromEvent(emitter, <span class="string">"msg"</span>);</span><br><span class="line"></span><br><span class="line">source$.subscribe(<span class="built_in">console</span>.log, error =&gt; <span class="built_in">console</span>.log(<span class="string">"error"</span>, error), () =&gt; &#123;&#125;);</span><br><span class="line"></span><br><span class="line">emitter.emit(<span class="string">"msg"</span>, <span class="number">1</span>);</span><br><span class="line">emitter.emit(<span class="string">"msg"</span>, <span class="number">2</span>);</span><br><span class="line">emitter.emit(<span class="string">"msg"</span>, <span class="number">3</span>);</span><br><span class="line">emitter.emit(<span class="string">"msg"</span>, <span class="number">4</span>);</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>from、of、interval、range</li>
+</ol>
+<p>这些常用操作符，看相关 api 文件即可，非常容易理解。</p>
+<p><a href="https://cn.rx.js.org/class/es6/Observable.js~Observable.html#static-method-create" target="_blank" rel="noopener"></a></p>
+<h2 id="5-使用-operator-操作流"><a href="#5-使用-operator-操作流" class="headerlink" title="5. 使用 operator 操作流"></a>5. 使用 operator 操作流</h2><p>Rxjs 具有函数式编程的思想，所以 Rxjs 的操作符大多数都是与函数式编程类似。<br>对 Observable 对象能够链式调用一些操作符，如 filter、map 等，原因是</p>
+<ol>
+<li>filter 和 map 都是 Observable 对象的成员函数</li>
+<li>filter 和 map 的返回结果都是 Observable 对象</li>
+<li>filter 和 map 不会改变原有的 Observale 对象</li>
+</ol>
+<p>RxJS 的操作符都遵循函数式编程的思想。</p>
+<h3 id="5-1-操作符分类"><a href="#5-1-操作符分类" class="headerlink" title="5.1 操作符分类"></a>5.1 操作符分类</h3><p>操作符按照功能分类，大概有以下几个内容：</p>
+<ol>
+<li>创建，即创建 Observable 的操作符，如 from、of、interval</li>
+<li>转换 如 map、pluck</li>
+<li>过滤 如 filter、last、take、throttle、debounce</li>
+<li>合并 如 concat、merge、zip</li>
+<li>多播 如 multicast</li>
+<li>错误处理 如 catch、retry</li>
+<li>辅助工具 如 do</li>
+<li>条件分支 如 every、find、isEmpty</li>
+<li>数学 如 count、max、min、reduce</li>
+</ol>
+<h3 id="5-2-弹珠图-marble-diagram-——操作符的可视化功能理解"><a href="#5-2-弹珠图-marble-diagram-——操作符的可视化功能理解" class="headerlink" title="5.2 弹珠图(marble diagram)——操作符的可视化功能理解"></a>5.2 弹珠图(marble diagram)——操作符的可视化功能理解</h3><p>弹珠图(其实应该叫“大理石”图?)，是一种理解 Rxjs 数据流的一种辅助工具，能够帮助我们厘清操作符的含义。<br>下面通过这个例子来说明弹珠图</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Rx.Observable.of(<span class="number">4</span>, <span class="number">6</span>, <span class="string">"a"</span>, <span class="number">8</span>)</span><br><span class="line">  .map(multiplyByTen)</span><br><span class="line">  .subscribe(<span class="built_in">console</span>.log);</span><br></pre></td></tr></table></figure>
+<p><img src="Marble_diagrams.PNG" alt></p>
+<p>首先，从图中可以看出几个基本组成要素：</p>
+<ol>
+<li>x 轴:是时间轴，代表产生的时间顺序</li>
+<li>圆：圆是代表一个值，Observable 通过调用 next(value)方法，发出的 value 值</li>
+<li>竖线：在时间轴左侧代表开始，后侧代表 complete 结束</li>
+<li>中间椭圆矩形框，代表 operator 的处理过程，返回的是新的 observable 数据流</li>
+</ol>
+<h3 id="5-3-实现操作符"><a href="#5-3-实现操作符" class="headerlink" title="5.3 实现操作符"></a>5.3 实现操作符</h3><p>Rxjs 已经提供了操作符 filter，用来出 true 的数据。我们现在如果想要增加一个 filter 的反义词 exclude，这个操作符如何实现呢？</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">exclude</span>(<span class="params">predicate</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> Rx.Observable.create(<span class="function"><span class="params">subscriber</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> source = <span class="keyword">this</span>; <span class="comment">//箭头函数的this指向的定义上下文的this</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//Observable内部逻辑如下</span></span><br><span class="line">    <span class="keyword">return</span> source.subscribe(</span><br><span class="line">      value =&gt; &#123;</span><br><span class="line">        <span class="comment">//next消费原observable的数据</span></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">          <span class="keyword">if</span> (!predicate(value)) &#123;</span><br><span class="line">            <span class="comment">//对原observable的数据进行处理，满足处理结果的数据传给现observable的next供消费</span></span><br><span class="line">            subscriber.next(value);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">          subscriber.error(err); <span class="comment">//出错走error</span></span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      err =&gt; subscriber.error(err), <span class="comment">// 传递原error</span></span><br><span class="line">      () =&gt; subscriber.complete() <span class="comment">//原complete方法</span></span><br><span class="line">    );</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Rx.Observable.prototype.exclude = exclude; <span class="comment">//绑定到Observable原型上</span></span><br></pre></td></tr></table></figure>
+<h2 id="6-取消流"><a href="#6-取消流" class="headerlink" title="6. 取消流"></a>6. 取消流</h2><p>Observable 通过 subscribe()方法订阅后，会返回一个 Subscription 对象，该对象的 unsubscribe()方法，可以取消流，并清理流所占资源。调用 unsubscribe 方法后，即停止流，结束整个过程。</p>
+<h2 id="7-实现一个-tiny-Rxjs"><a href="#7-实现一个-tiny-Rxjs" class="headerlink" title="7. 实现一个 tiny Rxjs"></a>7. 实现一个 tiny Rxjs</h2><p>Rxjs 的核心就是一个 observable 的产生、流动、和消费。这些个过程都是通过 observable 来完成。简单的过程就是，创建一个 observable、订阅 subscribe 产生数据流，订阅后的结果流提供 unsubscribe()方法终止。<br>简单的实现即：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TinyObservable</span> </span>&#123;</span><br><span class="line">  IntervalOf(events) &#123;</span><br><span class="line">    <span class="keyword">const</span> INTERVAL = <span class="number">1</span> * <span class="number">1000</span>;</span><br><span class="line">    <span class="keyword">let</span> schedulerId;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      subscribe: <span class="function"><span class="params">observer</span> =&gt;</span> &#123;</span><br><span class="line">        schedulerId = setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">          <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (events.length == <span class="number">0</span>) &#123;</span><br><span class="line">              observer.complete();</span><br><span class="line">              clearInterval(schedulerId);</span><br><span class="line">              schedulerId = <span class="literal">undefined</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">              observer.next(events.shift());</span><br><span class="line">            &#125;</span><br><span class="line">          &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">            observer.error(err);</span><br><span class="line">            clearInterval(schedulerId);</span><br><span class="line">            schedulerId = <span class="literal">undefined</span>;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;, INTERVAL);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">          unsubscribe: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (schedulerId) &#123;</span><br><span class="line">              clearInterval(schedulerId);</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> Observable = <span class="keyword">new</span> TinyObservable();</span><br><span class="line"><span class="keyword">let</span> subscription = Observable.IntervalOf([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]).subscribe(&#123;</span><br><span class="line">  next: <span class="built_in">console</span>.log,</span><br><span class="line">  error: <span class="function"><span class="params">err</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">"error"</span>, err),</span><br><span class="line">  complete: <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">"Done"</span>)</span><br><span class="line">&#125;);</span><br><span class="line">subscription.unsubscribe();</span><br></pre></td></tr></table></figure>
+<p>Observable 上的操作符，即参照上面实现的 exclude，添加至原型上即可。</p>
+<blockquote>
+<p>以上内容出自我可爱的同事的培训文档 (<em>^▽^</em>)</p>
+</blockquote>
+
+					
+				</div>
+			</div>
+		</article>
+
+		<ul class="am-pagination">
+    
+	
+		<li class="am-pagination-next">
+		<a class="pull-right" href="/2019/08/12/svg first/" title="SVG精髓笔记（一）">
+			下一篇 &raquo;
+		</a>
+		</li>
+	 
+ </ul>
+        
+
+		<div class="theme-annie-comment-button-container">
+	<button id="annie-comment-button" class="theme-annie-comment-button" onclick="Annie_Comment()">
+		加载评论
+		<!--加载评论-->
+	</button>
+</div>
+
+<div id="annie-comment-container" class="theme-annie-comment-main-container">
+
+	
+		
+			<!-- comment valine -->
+			<!-- show valine comment -->
+<div id="valineComment" class="comment"></div>
+
+<!-- valine`s js & css -->
+<script>
+	window.jQuery || document.write('<script src="/js/jquery-2.1.1.min.js"><\/script>')
+</script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/js/valine.min.js"></script>
+<link rel="stylesheet" href="/css/comment.css">
+
+<script>
+	var checkExistComment = setInterval(function() {
+		if( $('#valineComment').length ) {
+			new Valine({
+				// AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+				av: AV,
+				//使用id寻找div元素（使用class可能找不到）
+				el: '#valineComment',
+				emoticon_url: 'https://cloud.panjunwen.com/alu',
+				emoticon_list: ["吐.png", "期待.png", "高兴.png", "吐血倒地.png", "哭泣.png", "欢呼.png"],
+				app_id: "3333....", //获取APP ID
+				app_key: "3333......", //获取APP KEY
+				placeholder: "no any!", //评论框占位提示文字        			
+			});
+			clearInterval(checkExistComment);
+		}
+	}, 100);
+</script>
+		
+	
+
+</div>
+
+<script type="text/javascript">
+	/* Show Comment */
+	var Annie_Comment = function() {
+		function Show_Hidden(obj) {
+			obj.style.display = 'block';
+		}
+		
+		//var obutton = $('#annie-comment-button');
+		//var obutton = $('#annie-comment-container');
+		var obutton = document.getElementById("annie-comment-button" || "0");
+		var odiv = document.getElementById("annie-comment-container");
+		if( 'obutton' ) {
+			obutton.onclick = function() {
+				Show_Hidden(odiv);
+				$("#annie-comment-button").css("display", 'none');
+				return false;
+			}
+		}
+	};
+
+	(function Annie_Init() {
+		Annie_Comment();
+	})();
+</script>
+		
+		<!--
+	时间：2018-09-24
+	描述：The TOC module refers to 'https://github.com/codefine/hexo-theme-mellow', include toc.ejs、toc.js、toc.css. All rights reserved by codefine. 
+-->
+
+	
+		<aside class="post-widget">
+			<nav class="post-toc-wrap" id="post-toc">
+				
+					<strong>文章目录</strong>
+				
+				
+				<!--toc(post.content)-->
+				<ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#RxJS"><span class="post-toc-text">RxJS</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-RxJS-是什么？"><span class="post-toc-text">1. RxJS 是什么？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-编写异步或回调的代码"><span class="post-toc-text">2. 编写异步或回调的代码</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-1-基本的异步回调的代码"><span class="post-toc-text">2.1 基本的异步回调的代码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-2-使用-Promise-来处理回调"><span class="post-toc-text">2.2 使用 Promise 来处理回调</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-3-RxJS-的解决方案"><span class="post-toc-text">2.3 RxJS 的解决方案</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-RxJS-的一些概念"><span class="post-toc-text">3. RxJS 的一些概念</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-1-一些预备知识"><span class="post-toc-text">3.1 一些预备知识</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-1-1-观察者模式"><span class="post-toc-text">3.1.1 观察者模式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-1-2-迭代器模式"><span class="post-toc-text">3.1.2 迭代器模式</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-2-流"><span class="post-toc-text">3.2 流</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-3-Producers"><span class="post-toc-text">3.3 Producers</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-4-Consumers"><span class="post-toc-text">3.4 Consumers</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-5-Data-Pipeline"><span class="post-toc-text">3.5 Data Pipeline</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-6-time"><span class="post-toc-text">3.6 time</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-创建-Observable"><span class="post-toc-text">4. 创建 Observable</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-使用-operator-操作流"><span class="post-toc-text">5. 使用 operator 操作流</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-1-操作符分类"><span class="post-toc-text">5.1 操作符分类</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-2-弹珠图-marble-diagram-——操作符的可视化功能理解"><span class="post-toc-text">5.2 弹珠图(marble diagram)——操作符的可视化功能理解</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-3-实现操作符"><span class="post-toc-text">5.3 实现操作符</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-取消流"><span class="post-toc-text">6. 取消流</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-实现一个-tiny-Rxjs"><span class="post-toc-text">7. 实现一个 tiny Rxjs</span></a></li></ol></li></ol>
+			</nav>
+			<div class="post-toc-bar"><div>
+		</aside>
+	
+
+	</div>
+</div>
+		</div>
+		</main>
+		
+		<!--footer-->
+		<footer>
+	<div class="blog-text-center">
+		<div class="theme-annie-social">
+				
+				
+					<a href="https://github.com/LeMorlalala" title="Github" target="_blank"><i class="fa fa-github"></i>&nbsp;</a>
+					
+				
+					
+					
+						
+				
+		</div>
+	</div>
+
+	<div  class="blog-text-center">
+		<div class="theme-annie-copyright">
+			
+				&copy; 2018 - 2019, content by 大兰兰. All Rights Reserved.			       	
+			
+		</div>
+	</div>
+
+	<div class="blog-text-center">
+		<div class="theme-annie-copyright">
+			<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.		
+		</div>
+	</div>
+</footer>
+		<!-- <script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script> -->
+
+<script>
+	window.jQuery || document.write('<script src="/js/jquery-2.1.1.min.js"><\/script>')
+</script>
+
+<style>
+	.motto {
+		color: #000000;
+		font-size: 20px;
+		margin: 100px 25% 0;
+		width: 50%;
+		line-height: 1.4;
+		font-family:"KaiTi", "STXingkai", "Source Sans Pro", "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif;
+		text-align: center;
+	}
+	@media(max-width: 890px) {
+		.motto {	
+			margin: 100px 10% 0;
+			width: 80%;
+		}
+	}
+	@media(max-width: 890px) {
+		.motto {
+			margin: 100px 5% 0;
+			width: 90%;
+		}
+	}
+</style>
+
+
+	<script src="/js/motto.js"></script>
+	<script type="text/javascript">
+		$(".motto").html(getMingYanContent());
+	</script>	
+
+
+
+
+
+	<script type="text/javascript" src="/js/love.js"></script>
+
+
+
+	<script type="text/javascript" src="/js/toc.js"></script>
+
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript">
+	//generate a random img that pre_name 'from 0 to 110'
+	var random_bg = Math.floor(Math.random() * 109 + 1);
+
+	//var bg = 'url(/img/random/' + random_bg + '.jpg)';		
+	var bg = 'url(https://XXX-youname-XXX.github.io/Random-img/' + random_bg + '.jpg)';
+
+	$("#header-bg-2").css("background-image", bg);
+</script>
+		
+		<!--back to top-->
+        <style type="text/css">
+	#totop {
+		background: white;
+		border-radius: 50%;
+		position: fixed;
+		right: 5.4%;
+		bottom: 80px;
+		cursor: pointer;
+	}
+	
+	#totop a {
+		color: #474747;
+		background-color: transparent;
+		padding: 10px;
+		text-decoration: none;
+	}
+	
+	@media(max-width:512px) {
+		#totop {
+			display: none;
+			visibility: hidden;
+		}
+	}
+</style>
+
+
+	<div id="totop">
+  		<a href="javascript:;" class="fa fa-arrow-up"></a>
+	</div>
+
+	<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"scale":1,"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"superSample":2,"position":"right","width":160,"height":320},"mobile":{"show":true},"react":{"opacityDefault":1,"opacityOnHover":1},"log":false});</script></body>
+	</html>
+
