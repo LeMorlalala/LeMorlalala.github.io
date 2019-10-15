@@ -1,0 +1,517 @@
+<!--
+	作者：Sariay
+	时间：2018-09-25
+	描述：There may be a bug, but don't worry, QiLing(器灵) says that it can work normally!
+-->
+
+
+	<!DOCTYPE html>
+	<html>
+		
+
+<head><meta name="generator" content="Hexo 3.9.0">
+	<title>lalala</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-title" content="Amaze UI">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="大兰兰">
+    <meta name="keywords" content>
+    <meta name="description" content>
+   	<!-- css -->
+	<link rel="stylesheet" href="/css/style.css">
+
+	<!-- favicon -->
+	<link href="/img/favicon.ico" rel="Shortcut Icon" type="image/ico">
+	
+	<!-- font-awesome -->
+	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+	<body>	
+		<!--Preloader-->
+<div id="preloader">
+	<div id="status">
+		<img alt="PRELOADER" src="/img/logo.png">
+	</div>
+</div>
+<!--Preloader end-->
+
+<!-- header -->
+
+	<header id="header-bg-1" style="background-image: url( /img/head.jpg );">	
+
+	
+		<div id="cd-logo"><a href="/"><img src="/img/logo.png" alt="Logo"></a></div>
+	
+	
+	<!-- motto or description -->
+		
+ 		<p class="motto"></p>
+	
+	
+	<!-- current page name or title -->
+	
+		
+		
+			
+			<p class=page-name>当前文章&nbsp;:&nbsp;《》</p>
+			
+		
+	
+	
+	<!-- others: such as change-bg, time... -->
+	<p class="page-name-other">
+		10/15/2019 
+		<style type="text/css">
+	header:after {
+		content: '';
+		position: relative;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: #222222;
+		opacity: .5;
+		z-index: -1;
+	}
+	
+	.change-header-bg{
+		font-style: normal;
+	}
+	.change-header-bg i{
+		text-align: center;
+		cursor: pointer;
+		pointer-events: bounding-box;
+	}
+	@media(max-width:512px) {
+		.change-header-bg {
+			display: none;
+			visibility: hidden;
+		}
+	}
+	
+</style>
+
+<script type="text/javascript">
+	function changeHeaderBg(){
+		var random_bg = Math.floor(Math.random() * 109 + 1);
+		var bg = 'url(https://XXX-youname-XXX.github.io/Random-img/' + random_bg + '.jpg)';
+		$("#header-bg-2").css("background-image", bg);
+	}
+</script>
+
+<span class="change-header-bg">
+	——&nbsp;<i  class="fa fa-camera-retro" onclick="changeHeaderBg()"></i>	
+</span>
+	</p>		
+</header>
+
+<!-- nav -->
+<div id="cd-nav">
+	<a href="#0" title="menu" class="cd-nav-trigger"><span></span></a>
+
+	<nav id="cd-main-nav">
+		<ul>
+			
+      		<li class="fa fa-/">
+           		<a href="/" title="主页">主页</a>	
+      		</li>
+    		
+      		<li class="fa fa-/archives">
+           		<a href="/archives" title="归档">归档</a>	
+      		</li>
+    		
+      		<li class="fa fa-/categories">
+           		<a href="/categories" title="分类">分类</a>	
+      		</li>
+    		
+      		<li class="fa fa-/tags">
+           		<a href="/tags" title="标签">标签</a>	
+      		</li>
+    		
+      		<li class="fa fa-/about">
+           		<a href="/about" title="关于">关于</a>	
+      		</li>
+    		
+      		<li class="fa fa-/gallery">
+           		<a href="/gallery" title="相册">相册</a>	
+      		</li>
+    		
+    		
+        	
+		</ul>
+	</nav>
+</div>
+
+		<!--main-->
+		<main> 
+		<div class="page-container">
+		<!-- content srart -->
+<div class="am-g am-g-fixed blog-fixed blog-content">
+	<div class="am-u-md-8 am-u-sm-12">
+
+		<article class="am-article blog-article-p">
+
+			<div class="am-article-hd">
+				
+
+
+				<h1 class="am-article-title blog-text-center">
+					
+					
+				</h1>
+
+				<p class="am-article-meta blog-text-center">
+					<span>
+						<i class="fa fa-clock-o"></i> 
+						<a href="/2019/10/15/svg滤镜/" itemprop="url">
+	<time datetime="2019-10-15T05:17:26.751Z" itemprop="datePublished">
+  		2019-10-15
+  </time>
+</a>    
+&nbsp;
+					</span>
+					
+					<span>						
+						
+					</span>
+				</p>
+			</div>
+
+			<div class="am-article-bd">
+				<div class="content" id="post-content">
+					
+						<h1 id="svg-滤镜相关知识"><a href="#svg-滤镜相关知识" class="headerlink" title="svg 滤镜相关知识"></a>svg 滤镜相关知识</h1><h2 id="一些背景"><a href="#一些背景" class="headerlink" title="一些背景"></a>一些背景</h2><ol>
+<li><p>滤镜称得上是 SVG 最强大的功能了，它允许你给图形(图形元素和容器元素)添加各种专业软件中才有的滤镜特效。这样你就很容易在客户端生成和修改图像了。而且滤镜并没有破坏原有文档的结构，所以维护性也很好。</p>
+</li>
+<li><p>滤镜用 <code>filter</code> 元素定义；需要使用的时候，在需要滤镜效果的图形或容器上添加 <code>filter</code> 属性，引用相关滤镜即可。</p>
+</li>
+<li><p>起始和结束<code>filter</code>标记之间就是执行我们想要的操作的滤镜基元。每个基元有一个或多个输入，但是只有一个输出。一个输入可以是原始图形（SourceGraphic）、图形的阿尔法通道（黑色部分，即不透明的部分，被指定为 SourceAlpha），或者是前一个滤镜基元的输出。当只对图形的形状感兴趣而不管颜色的时候，阿尔法源是有用的，它会避免阿尔法和颜色相互作用。</p>
+</li>
+<li><p>使用滤镜的目的：滤镜应该用来帮助和增强我们的消息，而不是反过来让消息更不明显，明智地用一两个滤镜会有好处，而太多的滤镜几乎总是会弱化消息。</p>
+</li>
+</ol>
+<h2 id="一些定义"><a href="#一些定义" class="headerlink" title="一些定义"></a>一些定义</h2><p><code>&lt;feFlood&gt;</code>提供了一个纯色区域用于组合或者合并。它们很像<code>&lt;feOffset&gt;</code>，允许我们在一系列滤镜基元内执行某些常见的操作，而不是在主图形中创建额外的 svg 元素。我们只需提供<code>flood-color</code>和<code>flood-opacity</code>然后滤镜会完成其他工作。</p>
+<p><code>&lt;feMorphology&gt;</code>元素允许我们对图形进行”瘦身”或者加厚，可以指定<code>operator</code>值为<code>erode</code>来给图形进行瘦身，或者指定为<code>dilate</code>来加厚图形。<code>radius</code>属性用来告诉我们增厚或者变薄了多少。</p>
+<p><code>&lt;feMerge&gt;</code>基元包裹一个<code>&lt;feMergeNode&gt;</code>元素列表，其中每个元素都指定一个输入。这些输入按照它们出现的顺序一个堆叠在另一个上面。</p>
+<p><code>&lt;feGaussianBlur&gt;</code>表示生成投影，用 stdDeviation 属性指定它的模糊度，这个数值越大，模糊度越大。如果提供两个由空格分隔的数字，第一个表示 x 方向的模糊度，第二个作为 y 方向的模糊度。</p>
+<p><code>&lt;feComposite&gt;</code>元素接受两个输入源，假设我们已经给前一个滤镜基元指定了 result=”A”和 result=”B”，下面是主要用的 in out over 的解释，还有 xor atop arithmetic:</p>
+<ul>
+<li><p><code>&lt;feComposite operator=&quot;over&quot; in=&quot;A&quot; in2=&quot;B&quot; /&gt;</code> 生成的 A 层叠在 B 层上面，正如 feMergeNode 做的那样，事实上，feMergeNode 仅仅是指定 over 操作的一种便利的快捷方式。</p>
+</li>
+<li><p><code>&lt;feComposite operator=&quot;in&quot; in=&quot;A&quot; in2=&quot;B&quot; /&gt;</code> A 的一部分重叠在 B 的不透明区域，类似于蒙版效果，但是这个蒙版仅仅基于 B 的阿尔法通道，而不是它的颜色亮度。</p>
+</li>
+<li><p><code>&lt;feComposite operator=&quot;out&quot; in=&quot;A&quot; in2=&quot;B&quot; /&gt;</code> 结果是 A 的一部分位于 B 的不透明区域外部</p>
+</li>
+</ul>
+<h2 id="用一朵发来测试这些滤镜基元"><a href="#用一朵发来测试这些滤镜基元" class="headerlink" title="用一朵发来测试这些滤镜基元"></a>用一朵发来测试这些滤镜基元</h2><h3 id="feGaussianBlur"><a href="#feGaussianBlur" class="headerlink" title="feGaussianBlur"></a>feGaussianBlur</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;defs&gt;</span><br><span class="line">  &lt;filter id=<span class="string">"flower-shadow"</span>&gt;</span><br><span class="line">    &lt;feGaussianBlur <span class="keyword">in</span>=<span class="string">"SourceAlpha"</span> stdDeviation=<span class="string">"20"</span> result=<span class="string">"blur"</span> /&gt;</span><br><span class="line">    &lt;feMerge&gt;</span><br><span class="line">      &lt;feMergeNode <span class="keyword">in</span>=<span class="string">"blur"</span> /&gt;</span><br><span class="line">      &lt;feMergeNode <span class="keyword">in</span>=<span class="string">"SourceGraphic"</span> /&gt;</span><br><span class="line">    &lt;<span class="regexp">/feMerge&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>filter&gt;</span><br><span class="line">&lt;<span class="regexp">/defs&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>feGaussianBlur 基元的输入源我们使用 SourceAlpha 时，则表示我们只是模糊黑色部分，若不使用 feMerge 基元叠加上原始图形，出来的只是模糊的阿尔法通道图形。我们也可以用 SourceGraphic 作为输入源，出现的效果就是模糊的花朵源图形。</p>
+</blockquote>
+<h3 id="feOffset"><a href="#feOffset" class="headerlink" title="feOffset"></a>feOffset</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;defs&gt;</span><br><span class="line">  &lt;filter id=<span class="string">"flower-shadow"</span>&gt;</span><br><span class="line">    &lt;feGaussianBlur <span class="keyword">in</span>=<span class="string">"SourceAlpha"</span> stdDeviation=<span class="string">"2"</span> result=<span class="string">"blur"</span> /&gt;</span><br><span class="line">    &lt;feOffset dx=<span class="string">"10"</span> dy=<span class="string">"10"</span> result=<span class="string">"offsetblur"</span> /&gt;</span><br><span class="line">    &lt;feMerge&gt;</span><br><span class="line">      &lt;feMergeNode <span class="keyword">in</span>=<span class="string">"offsetblur"</span> /&gt;</span><br><span class="line">      &lt;feMergeNode <span class="keyword">in</span>=<span class="string">"SourceGraphic"</span> /&gt;</span><br><span class="line">    &lt;<span class="regexp">/feMerge&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>filter&gt;</span><br><span class="line">&lt;<span class="regexp">/defs&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>feOffset 基元接受 feGaussianBlur 返回的结果 in=”blur”可写可不写，它的偏移位置由 dx 和 dy 的值指定，然后将结果位图存储在 offsetBlur 名字下面。</p>
+</blockquote>
+<h3 id="feColorMatrix"><a href="#feColorMatrix" class="headerlink" title="feColorMatrix"></a>feColorMatrix</h3><p>投影在花朵上的效果很好，但应用给文本时则完全不理想，看例子在 jsbin 上的演示；但如果文本周围有一个发光区域，看起来会更好看</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;svg version=<span class="string">"1.1"</span> width=<span class="string">"200"</span> height=<span class="string">"200"</span> style=<span class="string">"border:1px solid #ccc"</span>&gt;</span><br><span class="line">  &lt;defs&gt;</span><br><span class="line">    &lt;filter id=<span class="string">"flower-shadow"</span> width=<span class="string">"200%"</span> height=<span class="string">"200%"</span> x=<span class="string">"-50%"</span> y=<span class="string">"-50%"</span>&gt;</span><br><span class="line">      &lt;feColorMatrix</span><br><span class="line">        type=<span class="string">"matrix"</span></span><br><span class="line">        values=<span class="string">"0 0 0 0 0</span></span><br><span class="line"><span class="string">                              0 0 0 0.9 0</span></span><br><span class="line"><span class="string">                              0 0 0 0.9 0</span></span><br><span class="line"><span class="string">                              0 0 0 1 0"</span></span><br><span class="line">        result=<span class="string">"light"</span></span><br><span class="line">      /&gt;</span><br><span class="line">      &lt;feGaussianBlur stdDeviation=<span class="string">"2.5"</span> result=<span class="string">"blur"</span> /&gt;</span><br><span class="line">      &lt;feMerge&gt;</span><br><span class="line">        &lt;feMergeNode <span class="keyword">in</span>=<span class="string">"blur"</span> /&gt;</span><br><span class="line">        &lt;feMergeNode <span class="keyword">in</span>=<span class="string">"SourceGraphic"</span> /&gt;</span><br><span class="line">      &lt;<span class="regexp">/feMerge&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>filter&gt;</span><br><span class="line">  &lt;<span class="regexp">/defs&gt;</span></span><br><span class="line"><span class="regexp">  &lt;g filter="url(#flower-shadow)"&gt;</span></span><br><span class="line"><span class="regexp">    &lt;text x="20" y="20" fill="#01d6ff"&gt;</span></span><br><span class="line"><span class="regexp">      vfvfvf</span></span><br><span class="line"><span class="regexp">    &lt;/</span>text&gt;</span><br><span class="line">  &lt;<span class="regexp">/g&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>svg&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>feColorMatrix 允许我们修改任意像素点的颜色或者阿尔法值，当他的 type 是 matrix，value 必须设置为 4x5 的矩阵。每行代表一个代数方程，定义了如何计算输出的 R G B A 值，每行数字分别乘以输入像素的 R G B A 和常量值，然后加在一起得到最后的输出值。上图中设置的变换是将所有不透明的区域绘制成相同的颜色，此时可以忽略颜色和常量，只要设置阿尔法的值即可。</p>
+</blockquote>
+<p>对于复杂的 feColorMatrix 值的设置，公式是这样的，它能够对每个颜色通道进行编辑，类似 photoshop 中的通道编辑</p>
+<p><img src="./img/filter1.png" alt="feColorMatrix矩阵公式"></p>
+<p>RGB 通道图：</p>
+<p><img src="./img/filter2.png" alt="RGB通道图"></p>
+<p>下面是使用 feColorMatrix 的 matrix 类型来变换颜色的一张风景图的小小例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;svg  version=<span class="string">"1.1"</span>  width=<span class="string">"1000"</span> height=<span class="string">"1000"</span> style=<span class="string">"border:1px solid #ccc"</span>&gt;</span><br><span class="line">   &lt;defs&gt;</span><br><span class="line">     &lt;filter id=<span class="string">"flower-shadow"</span> width=<span class="string">"200%"</span> height=<span class="string">"200%"</span> x=<span class="string">"-50%"</span> y=<span class="string">"-50%"</span> &gt;</span><br><span class="line"></span><br><span class="line">       &lt;feColorMatrix type=<span class="string">"matrix"</span></span><br><span class="line">                      values=<span class="string">"1.2 0 0 0 0</span></span><br><span class="line"><span class="string">                              0 1 0 0 0</span></span><br><span class="line"><span class="string">                              0 0 1.5 0 0</span></span><br><span class="line"><span class="string">                              0 0 0 1 0"</span></span><br><span class="line">                     result=<span class="string">"light"</span> /&gt;</span><br><span class="line"></span><br><span class="line">       &lt;feGaussianBlur  stdDeviation=<span class="string">"2.5"</span> result=<span class="string">"blur"</span>/&gt;</span><br><span class="line">       &lt;feMerge&gt;</span><br><span class="line">        &lt;feMergeNode <span class="keyword">in</span>=<span class="string">"light"</span> /&gt;</span><br><span class="line">         &lt;!--<span class="xml"><span class="tag">&lt;<span class="name">feMergeNode</span> <span class="attr">in</span>=<span class="string">"SourceGraphic"</span> /&gt;</span>--&gt;</span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">feMerge</span>&gt;</span></span></span><br><span class="line">     &lt;<span class="regexp">/filter&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">   &lt;/</span>defs&gt;</span><br><span class="line"></span><br><span class="line">    &lt;g filter=<span class="string">"url(#flower-shadow)"</span>&gt;</span><br><span class="line">      &lt;image x=<span class="string">"0"</span> y=<span class="string">"0"</span>  height=<span class="string">"300"</span> href=<span class="string">"http://img.mp.itc.cn/upload/20160830/fe779ac6f79d4fb2a8101fda35eb8bdd_th.jpg"</span> /&gt;</span><br><span class="line">    &lt;<span class="regexp">/g&gt;</span></span><br><span class="line"><span class="regexp">    &lt;g&gt;</span></span><br><span class="line"><span class="regexp">    &lt;image x="0" y="320"  height="300" href="http:/</span><span class="regexp">/img.mp.itc.cn/u</span>pload/<span class="number">20160830</span>/fe779ac6f79d4fb2a8101fda35eb8bdd_th.jpg<span class="string">" /&gt;</span></span><br><span class="line"><span class="string">    &lt;/g&gt;</span></span><br><span class="line"><span class="string">&lt;/svg&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这是用 feColorMatrix 来做反色的例子，通过 255 减去当前每个通道的颜色值，来取反</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//css</span></span><br><span class="line">.test&#123;</span><br><span class="line">  width:<span class="number">200</span>px;</span><br><span class="line">  height:<span class="number">200</span>px;</span><br><span class="line">  background:#000;</span><br><span class="line">  filter:url(#flower-shadow)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&lt;svg&gt;</span><br><span class="line">    &lt;defs&gt;</span><br><span class="line">     &lt;filter id=<span class="string">"flower-shadow"</span> width=<span class="string">"200%"</span> height=<span class="string">"200%"</span> x=<span class="string">"-50%"</span> y=<span class="string">"-50%"</span> &gt;</span><br><span class="line"></span><br><span class="line">       &lt;feColorMatrix type=<span class="string">"matrix"</span></span><br><span class="line">                      values=<span class="string">"-1 0 0 0 1</span></span><br><span class="line"><span class="string">                              0 -1 0 0 1</span></span><br><span class="line"><span class="string">                              0 0 -1 0 1</span></span><br><span class="line"><span class="string">                              0 0 0 1 0"</span></span><br><span class="line">                     result=<span class="string">"light"</span> /&gt;</span><br><span class="line"></span><br><span class="line">       &lt;feGaussianBlur  stdDeviation=<span class="string">"2.5"</span> result=<span class="string">"blur"</span>/&gt;</span><br><span class="line">       &lt;feMerge&gt;</span><br><span class="line">        &lt;feMergeNode <span class="keyword">in</span>=<span class="string">"light"</span> /&gt;</span><br><span class="line">         &lt;!--<span class="xml"><span class="tag">&lt;<span class="name">feMergeNode</span> <span class="attr">in</span>=<span class="string">"SourceGraphic"</span> /&gt;</span>--&gt;</span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">feMerge</span>&gt;</span></span></span><br><span class="line">     &lt;<span class="regexp">/filter&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">   &lt;/</span>defs&gt;</span><br><span class="line">  &lt;<span class="regexp">/svg&gt;</span></span><br><span class="line"><span class="regexp">  &lt;div class="test"&gt;&lt;/</span>div&gt;</span><br><span class="line">  &lt;svg  version=<span class="string">"1.1"</span>  width=<span class="string">"1000"</span> height=<span class="string">"1000"</span> style=<span class="string">"border:1px solid #ccc"</span>&gt;</span><br><span class="line"></span><br><span class="line">    &lt;g filter=<span class="string">"url(#flower-shadow)"</span>&gt;</span><br><span class="line">      &lt;!--<span class="xml"><span class="tag">&lt;<span class="name">image</span> <span class="attr">x</span>=<span class="string">"0"</span> <span class="attr">y</span>=<span class="string">"0"</span>  <span class="attr">height</span>=<span class="string">"300"</span> <span class="attr">href</span>=<span class="string">"http://img.mp.itc.cn/upload/20160830/fe779ac6f79d4fb2a8101fda35eb8bdd_th.jpg"</span> /&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">g</span>&gt;</span></span>--&gt;</span><br><span class="line">      &lt;rect fill=<span class="string">"#fff"</span> width=<span class="string">"200"</span> height=<span class="string">"200"</span> /&gt;</span><br><span class="line">    &lt;g&gt;</span><br><span class="line">    &lt;image x=<span class="string">"0"</span> y=<span class="string">"320"</span>  height=<span class="string">"300"</span> href=<span class="string">"http://img.mp.itc.cn/upload/20160830/fe779ac6f79d4fb2a8101fda35eb8bdd_th.jpg"</span> /&gt;</span><br><span class="line">    &lt;<span class="regexp">/g&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>svg&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>上述例子说明了几点滤镜的功能，当定义了全局通用的 svg filter 之后，别的 svg 中可以引用上述公用的滤镜的样式，页面元素通过 css 也可以引用公用的滤镜样式。</p>
+</blockquote>
+<p>feColorMatrix 除了使用通用的颜色矩阵外，type 属性还可以设置其他三个值，包含：hueRotate(色相旋转)、saturate(饱和度)、luminanceToAlpha(用亮度决定阿尔法值)，每个都有自己指定的 values 的方式。下面单独介绍下饱和度，其他使用较少</p>
+<p>saturate 表示饱和度，values 值是 0-1 的数字，数字越小，颜色褪色越多</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//saturate</span></span><br><span class="line">&lt;feColorMatrix type=<span class="string">"saturate"</span> values=<span class="string">"0"</span> result=<span class="string">"light"</span> /&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="feImage"><a href="#feImage" class="headerlink" title="feImage"></a>feImage</h3><p>至此，我们都使用原始图形或者阿尔法通道作为滤镜的输入源。SVG 的<code>&lt;feImage&gt;</code>元素允许我们使用任意的 jpg、png、svg 文件，或者带有 id 属性的 SVG 元素作为滤镜输入源，还是以之前那朵发作为例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;defs&gt;</span><br><span class="line">  &lt;filter id=<span class="string">"flower-shadow"</span>&gt;</span><br><span class="line">    &lt;feImage</span><br><span class="line">      xlink:href=<span class="string">"https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1570688879227&amp;di=9238fc711ef1180cdc7b9af2d196554b&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.taopic.com%2Fuploads%2Fallimg%2F110601%2F1509-110601214641100.jpg"</span></span><br><span class="line">      x=<span class="string">"0"</span></span><br><span class="line">      y=<span class="string">"0"</span></span><br><span class="line">      width=<span class="string">"100%"</span></span><br><span class="line">      height=<span class="string">"100%"</span></span><br><span class="line">      preserveAspectRatio=<span class="string">"none"</span></span><br><span class="line">      result=<span class="string">"sky"</span></span><br><span class="line">    /&gt;</span><br><span class="line">    &lt;feGaussianBlur stdDeviation=<span class="string">"2"</span> result=<span class="string">"blur"</span> /&gt;</span><br><span class="line">    &lt;feMerge&gt;</span><br><span class="line">      &lt;feMergeNode <span class="keyword">in</span>=<span class="string">"blur"</span> /&gt;</span><br><span class="line">      &lt;feMergeNode <span class="keyword">in</span>=<span class="string">"SourceGraphic"</span> /&gt;</span><br><span class="line">    &lt;<span class="regexp">/feMerge&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>filter&gt;</span><br><span class="line">&lt;<span class="regexp">/defs&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>上面使用<code>feImage</code>给发加上了天空图案的背景</p>
+</blockquote>
+<h3 id="feComposite"><a href="#feComposite" class="headerlink" title="feComposite"></a>feComposite</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;defs&gt;</span><br><span class="line">  &lt;filter id=<span class="string">"flower-shadow"</span>&gt;</span><br><span class="line">    &lt;feImage</span><br><span class="line">      xlink:href=<span class="string">"https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1570688879227&amp;di=9238fc711ef1180cdc7b9af2d196554b&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.taopic.com%2Fuploads%2Fallimg%2F110601%2F1509-110601214641100.jpg"</span></span><br><span class="line">      x=<span class="string">"0"</span></span><br><span class="line">      y=<span class="string">"0"</span></span><br><span class="line">      width=<span class="string">"100%"</span></span><br><span class="line">      height=<span class="string">"100%"</span></span><br><span class="line">      preserveAspectRatio=<span class="string">"none"</span></span><br><span class="line">      result=<span class="string">"sky"</span></span><br><span class="line">    /&gt;</span><br><span class="line">    &lt;feGaussianBlur stdDeviation=<span class="string">"2"</span> result=<span class="string">"blur"</span> /&gt;</span><br><span class="line">    &lt;feComposite operator=<span class="string">"in"</span> <span class="keyword">in</span>=<span class="string">"sky"</span> in2=<span class="string">"SourceGraphic"</span> /&gt;</span><br><span class="line">  &lt;<span class="regexp">/filter&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>defs&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>over 和 feMerge 的作用类似，in 表示源 A 重叠在源 B 的不透明区域，out 则营造了一种”镂空”的效果</p>
+</blockquote>
+<h3 id="feDisplacementMap"><a href="#feDisplacementMap" class="headerlink" title="feDisplacementMap"></a>feDisplacementMap</h3><p>这个滤镜使用第二个输入的颜色值决定在第一个输入中移动像素的距离，我们用 xChannelSelector 指定应该用哪个颜色通道来影响像素的 x 坐标，用 yChannelSelector 属性指定用哪个颜色通道来影响 y 坐标。这些选择器的合法值是 R、G、B、A。还必须指定移动像素的距离；scale 属性用于指定缩放因子。如果不指定这个属性，滤镜什么都不做。</p>
+<h3 id="feTurbulence"><a href="#feTurbulence" class="headerlink" title="feTurbulence"></a>feTurbulence</h3><p><code>feTurbulence</code>允许我们通过使用 Ken Perlin 开发的方程，生成大理石，云彩等人工纹理效果，要指定以下属性。</p>
+<ul>
+<li><p>type turbulence 和 fractalNoise 之一，后者显示更平滑</p>
+</li>
+<li><p>baseFrequency 属性值的数字越大，结果颜色的变化越快，数值必须大于 0 小于 1，提供两个数字的情况则第一个表示 x 的频率，第二个作为 y 的频率。</p>
+</li>
+<li><p>numOctaves 这是噪音函数使用的数值 生成最终结果时应该加上这个数值，数值越大，纹理粒度越细，默认值为 1</p>
+</li>
+<li><p>seed 这个滤镜使用的随机生成器的种子，默认值为 0 改变它可以得到一些不同的效果</p>
+</li>
+</ul>
+<p>下面也是一些简单的例子：</p>
+<h2 id="用滤镜营造内外边框等效果"><a href="#用滤镜营造内外边框等效果" class="headerlink" title="用滤镜营造内外边框等效果"></a>用滤镜营造内外边框等效果</h2><h3 id="给-path-text-等加上外部的-stroke-效果，可用于-path-的线-stroke-外面还想加上-stroke-使-hover-效果更明显"><a href="#给-path-text-等加上外部的-stroke-效果，可用于-path-的线-stroke-外面还想加上-stroke-使-hover-效果更明显" class="headerlink" title="给 path,text 等加上外部的 stroke 效果，可用于 path 的线 stroke 外面还想加上 stroke 使 hover 效果更明显"></a>给 path,text 等加上外部的 stroke 效果，可用于 path 的线 stroke 外面还想加上 stroke 使 hover 效果更明显</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;svg xmlns=<span class="string">"http://www.w3.org/2000/svg"</span> width=<span class="string">"300"</span> height=<span class="string">"180"</span>&gt;</span><br><span class="line">  &lt;filter id=<span class="string">"dilate"</span>&gt;</span><br><span class="line">    &lt;feFlood flood-color=<span class="string">"red"</span> result=<span class="string">"outside-color"</span> /&gt;</span><br><span class="line">    &lt;feMorphology <span class="keyword">in</span>=<span class="string">"SourceAlpha"</span> operator=<span class="string">"dilate"</span> radius=<span class="string">"3"</span> /&gt;</span><br><span class="line">    &lt;feComposite <span class="keyword">in</span>=<span class="string">"outside-color"</span> operator=<span class="string">"in"</span> result=<span class="string">"outside-stroke"</span> /&gt;</span><br><span class="line">    &lt;feComposite <span class="keyword">in</span>=<span class="string">"SourceGraphic"</span> operator=<span class="string">"in"</span> result=<span class="string">"fill-area"</span> /&gt;</span><br><span class="line"></span><br><span class="line">    &lt;feMerge&gt;</span><br><span class="line">      &lt;feMergeNode <span class="keyword">in</span>=<span class="string">"outside-stroke"</span> /&gt;</span><br><span class="line">      &lt;feMergeNode <span class="keyword">in</span>=<span class="string">"fill-area"</span> /&gt;</span><br><span class="line">    &lt;<span class="regexp">/feMerge&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>filter&gt;</span><br><span class="line">  &lt;text id=<span class="string">"thick"</span> y=<span class="string">"3em"</span> filter=<span class="string">"url(#dilate)"</span>&gt;</span><br><span class="line">    Fattened text</span><br><span class="line">  &lt;<span class="regexp">/text&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>svg&gt;</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p><img src="./img/feMorphology.jpg" alt="外边框"></p>
+<blockquote>
+<p>首先用 feFlood 标签定义外边框的颜色，当前是红色，再用 feMorphology 加厚文字，当前两个元素并无交集，我们使用 feComposite 使颜色层叠在加厚层的上面，那么就变成了红色且加厚的文字。再把原图形/文字叠在上面则形成了加红色外边框的效果。</p>
+</blockquote>
+<h3 id="给-path-text-加上内部-stroke-的效果"><a href="#给-path-text-加上内部-stroke-的效果" class="headerlink" title="给 path,text 加上内部 stroke 的效果"></a>给 path,text 加上内部 stroke 的效果</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;svg xmlns=<span class="string">"http://www.w3.org/2000/svg"</span> width=<span class="string">"300"</span> height=<span class="string">"180"</span>&gt;</span><br><span class="line">  &lt;filter id=<span class="string">"dilate"</span>&gt;</span><br><span class="line">    &lt;feFlood flood-color=<span class="string">"red"</span> result=<span class="string">"outside-color"</span> /&gt;</span><br><span class="line">    &lt;feMorphology <span class="keyword">in</span>=<span class="string">"SourceAlpha"</span> operator=<span class="string">"erode"</span> radius=<span class="string">"1"</span> result=<span class="string">"vf"</span> /&gt;</span><br><span class="line">    &lt;feComposite <span class="keyword">in</span>=<span class="string">"outside-color"</span> in2=<span class="string">"SourceGraphic"</span> operator=<span class="string">"in"</span> result=<span class="string">"fill-area"</span> /&gt;</span><br><span class="line">    &lt;feMerge&gt;</span><br><span class="line">      &lt;feMergeNode <span class="keyword">in</span>=<span class="string">"fill-area"</span> /&gt;</span><br><span class="line">      &lt;feMergeNode <span class="keyword">in</span>=<span class="string">"vf"</span> /&gt;</span><br><span class="line">    &lt;<span class="regexp">/feMerge&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>filter&gt;</span><br><span class="line">  &lt;text id=<span class="string">"thick"</span> y=<span class="string">"3em"</span> filter=<span class="string">"url(#dilate)"</span>&gt;</span><br><span class="line">    Fattened text</span><br><span class="line">  &lt;<span class="regexp">/text&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>svg&gt;</span><br></pre></td></tr></table></figure>
+<p>效果如下:</p>
+<p><img src="./img/feMorphology_ercode.jpg" alt="内边框"></p>
+<h3 id="给-path-加上内部发光的效果"><a href="#给-path-加上内部发光的效果" class="headerlink" title="给 path 加上内部发光的效果"></a>给 path 加上内部发光的效果</h3><blockquote>
+<p>内边框只是把原图叠加一层需要设置的内边框颜色，在此基础上，再叠加一层变瘦的图形，颜色为原图形的默认颜色。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&lt;svg</span><br><span class="line">  xmlns=<span class="string">"http://www.w3.org/2000/svg"</span></span><br><span class="line">  xmlns:xlink=<span class="string">"http://www.w3.org/1999/xlink"</span></span><br><span class="line">  width=<span class="string">"150"</span></span><br><span class="line">  height=<span class="string">"150"</span></span><br><span class="line">  style=<span class="string">"transform:scale(2);transform-origin:0 0 "</span></span><br><span class="line">&gt;</span><br><span class="line">  &lt;defs&gt;</span><br><span class="line">    &lt;filter id=<span class="string">"inset"</span> x=<span class="string">"-50%"</span> y=<span class="string">"-50%"</span> width=<span class="string">"200%"</span> height=<span class="string">"200%"</span>&gt;</span><br><span class="line">      &lt;feFlood fill-color=<span class="string">"#000"</span> result=<span class="string">"test"</span> /&gt;</span><br><span class="line">      &lt;feComposite <span class="keyword">in</span>=<span class="string">"test"</span> in2=<span class="string">"SourceAlpha"</span> operator=<span class="string">"out"</span> /&gt;</span><br><span class="line"></span><br><span class="line">      &lt;feGaussianBlur stdDeviation=<span class="string">"10"</span> edgeMode=<span class="string">"none"</span> /&gt;</span><br><span class="line"></span><br><span class="line">      &lt;feOffset dx=<span class="string">"0"</span> dy=<span class="string">"0"</span> result=<span class="string">"offsetblur"</span> /&gt;</span><br><span class="line">      &lt;feFlood flood-color=<span class="string">"#00ff00"</span> result=<span class="string">"color"</span> /&gt;</span><br><span class="line">      &lt;!--②--&gt;</span><br><span class="line">      &lt;feComposite in2=<span class="string">"offsetblur"</span> operator=<span class="string">"in"</span> /&gt;</span><br><span class="line">      &lt;!--③--&gt;</span><br><span class="line">      &lt;feComposite in2=<span class="string">"SourceAlpha"</span> operator=<span class="string">"in"</span> /&gt;</span><br><span class="line">      &lt;feMerge&gt;</span><br><span class="line">        &lt;feMergeNode <span class="keyword">in</span>=<span class="string">"SourceGraphic"</span> /&gt;</span><br><span class="line">        &lt;feMergeNode /&gt;</span><br><span class="line">      &lt;<span class="regexp">/feMerge&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>filter&gt;</span><br><span class="line">  &lt;<span class="regexp">/defs&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">  &lt;path</span></span><br><span class="line"><span class="regexp">    class="st0"</span></span><br><span class="line"><span class="regexp">    d="M144.7,126.2l-2.8,8.8l-3.9-2.3l-2-7.7l1.7-4.3l5.5-4.4L144.7,126.2z M93.5,24.2l6,6.3l4.4-1l7.5,6l1.9,1.1l2.5-0.3l4,3.4l12.3,2.4l-4.3,8.9l-1.1,9.1l-2.4,2.2l-3.9-1.2l0.3,3.2l-6.3,7l-0.1,5.6l4.1-1.9l2.9,5.4L121,84l2.5,4.6l-3,3.7l2.2,9.3l4.6,1.5l-1,5.1l-7.8,6.6l-16.9-3.2l-12.5,3.8l-1,7l-9.9,1.5l-9.6-5.3l-3.1,2.5l-15.8-5.3l-3.4-4.6l4.4-7.1l1.6-24.1l-8.8-13l-6.3-6.4l-13.1-4.9l-0.9-9.4l11.1-2.8L48.9,47l-2.7-14.8l8.1,5.7l20-10.3l2.6-11l7.5-2.8l1.3,4.8l4,0.2L93.5,24.2z"</span></span><br><span class="line"><span class="regexp">    stroke-width="1"</span></span><br><span class="line"><span class="regexp">    fill="#00ffff"</span></span><br><span class="line"><span class="regexp">    stroke="red"</span></span><br><span class="line"><span class="regexp">    filter="url(#inset)"</span></span><br><span class="line"><span class="regexp">  /</span>&gt;</span><br><span class="line">&lt;<span class="regexp">/svg&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>内发光的效果使用了 feComposite 的 operatpr 属性，in 表示覆盖在不透明区域，out 表示覆盖在不透明区域外。首先我们定义一个颜色层，并使用 out 的特性填充在原图的不透明区域，就相当在整个 svg 区域内把原图挖空，那么当前是一个外部填充了#000，但原图被抠掉的区域（为透明）。到第 ② 步位置，则是给图加上了高斯模糊，并且叠了一层绿色上去。高斯模糊针对于图形的边且根据 stdDeviation 数值的大小形成模糊的效果，我们这里的模糊是想用来做内部的发光效果。第 ③ 步也是最重要的一步，把刚刚设置的外部区域重叠在原始图形的不透明区域，则相当于 ② 步骤出来的图形剪成原始图形的样子，值保留了边缘的高斯模糊和内部的透明。此时使用 feMergeNode 在原图的颜色叠上 ③ 出来的元素，则看上去为内发光的效果。</p>
+</blockquote>
+<p>效果如下:</p>
+<p><img src="./img/inner_glow.jpg" alt="内发光"></p>
+<h3 id="feComponentTransfer"><a href="#feComponentTransfer" class="headerlink" title="feComponentTransfer"></a>feComponentTransfer</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;svg width=<span class="string">"400"</span> height=<span class="string">"400"</span>&gt;</span><br><span class="line">    &lt;filter id=<span class="string">"shadow"</span>&gt;</span><br><span class="line">        &lt;feGaussianBlur <span class="keyword">in</span>=<span class="string">"SourceAlpha"</span> stdDeviation=<span class="string">"2"</span> result=<span class="string">"blur"</span> /&gt;</span><br><span class="line">        &lt;feOffset <span class="keyword">in</span>=<span class="string">"blur"</span> dx=<span class="string">"4"</span> dy=<span class="string">"4"</span> result=<span class="string">"offsetBlur"</span> /&gt;</span><br><span class="line">        &lt;feMerge&gt;</span><br><span class="line">            &lt;feMergeNode <span class="keyword">in</span>=<span class="string">"offsetBlur"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">feMergeNode</span>&gt;</span></span></span><br><span class="line">            &lt;feMergeNode <span class="keyword">in</span>=<span class="string">"SourceGraphic"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">feMergeNode</span>&gt;</span></span></span><br><span class="line">        &lt;<span class="regexp">/feMerge&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    &lt;/</span>filter&gt;</span><br><span class="line">     &lt;filter id=<span class="string">"glow"</span>&gt;</span><br><span class="line">         &lt;feColorMatrix type=<span class="string">"matrix"</span> values=<span class="string">" 0 0 0 0 0</span></span><br><span class="line"><span class="string">         0 0 0 0.9 0</span></span><br><span class="line"><span class="string">         0 0 0 0.9 0</span></span><br><span class="line"><span class="string">         0 0 0 1   0 "</span> /&gt;</span><br><span class="line">        &lt;feGaussianBlur stdDeviation=<span class="string">"5"</span> result=<span class="string">"colorBlur"</span> /&gt;</span><br><span class="line">       &lt;!-- <span class="xml"><span class="tag">&lt;<span class="name">feOffset</span> <span class="attr">in</span>=<span class="string">"colorBlur"</span> <span class="attr">dx</span>=<span class="string">"4"</span> <span class="attr">dy</span>=<span class="string">"4"</span> <span class="attr">result</span>=<span class="string">"offsetBlur"</span> /&gt;</span> --&gt;</span></span><br><span class="line">        &lt;feMerge&gt;</span><br><span class="line">            &lt;feMergeNode in="colorBlur"&gt;&lt;/feMergeNode&gt;</span><br><span class="line">            &lt;feMergeNode in="SourceGraphic"&gt;&lt;/feMergeNode&gt;</span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">feMerge</span>&gt;</span></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">filter</span>&gt;</span></span></span><br><span class="line">    &lt;g filter=<span class="string">"url(#glow)"</span>&gt;</span><br><span class="line">        &lt;rect x=<span class="string">"10"</span> y=<span class="string">"10"</span> width=<span class="string">"200"</span> height=<span class="string">"200"</span> fill=<span class="string">"#ccc"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">rect</span>&gt;</span></span></span><br><span class="line">    &lt;<span class="regexp">/g&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>svg&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;svg width=<span class="string">"600"</span> height=<span class="string">"600"</span>&gt;</span><br><span class="line">   &lt;filter id=<span class="string">"inset-shadow"</span> x=<span class="string">"-50%"</span> y=<span class="string">"-50%"</span> width=<span class="string">"200%"</span> height=<span class="string">"200%"</span>&gt;</span><br><span class="line">    &lt;feComponentTransfer <span class="keyword">in</span>=<span class="string">"SourceAlpha"</span>&gt;</span><br><span class="line">      &lt;feFuncA type=<span class="string">"table"</span> tableValues=<span class="string">"1 0"</span> /&gt;</span><br><span class="line">    &lt;<span class="regexp">/feComponentTransfer&gt;</span></span><br><span class="line"><span class="regexp">    &lt;feGaussianBlur stdDeviation="4" result="offsetblur" /</span>&gt;</span><br><span class="line">    &lt;feFlood flood-color=<span class="string">"red"</span> result=<span class="string">"color"</span>/&gt;</span><br><span class="line">    &lt;!-- <span class="xml"><span class="tag">&lt;<span class="name">feOffset</span> <span class="attr">dx</span>=<span class="string">"0"</span> <span class="attr">dy</span>=<span class="string">"0"</span> <span class="attr">result</span>=<span class="string">"offsetblur"</span>/&gt;</span> --&gt;</span></span><br><span class="line">    &lt;feComposite in="color" in2="offsetblur" operator="in"/&gt;</span><br><span class="line">    &lt;feComposite in2="SourceAlpha" operator="in" /&gt;</span><br><span class="line">    &lt;feMerge&gt;</span><br><span class="line">      &lt;feMergeNode in="SourceGraphic" /&gt;</span><br><span class="line">      &lt;feMergeNode /&gt;</span><br><span class="line">    &lt;/feMerge&gt;</span><br><span class="line">  &lt;/filter&gt;</span><br><span class="line">&lt;rect x=100 y=100 width="200px" height="200px" fill="blue" filter="url(#inset-shadow)" /&gt;</span><br><span class="line">&lt;/svg&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="一种图片切换的效果"><a href="#一种图片切换的效果" class="headerlink" title="一种图片切换的效果"></a>一种图片切换的效果</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;svg width=<span class="string">"1600px"</span> height=<span class="string">"800px"</span>&gt;</span><br><span class="line">&lt;defs&gt;</span><br><span class="line">  &lt;filter id=<span class="string">"turbulent-dissolve"</span> x=<span class="string">"0%"</span> y=<span class="string">"0%"</span>&gt;</span><br><span class="line">  &lt;!--  <span class="xml"><span class="tag">&lt;<span class="name">feColorMatrix</span> <span class="attr">type</span>=<span class="string">"luminanceToAlpha"</span>/&gt;</span>--&gt;</span></span><br><span class="line">   &lt;feComponentTransfer&gt;</span><br><span class="line">      &lt;feFuncA type="linear" slope="0"&gt;</span><br><span class="line">        &lt;animate attributeName="slope" delay="8s" values="0;0;0;0;0;0.5;1;1.5;2;2;2;2;2;2;1.5;1;0.5;0" dur="10s" repeatCount="indefinite"/&gt;</span><br><span class="line">     &lt;/feFuncA&gt;</span><br><span class="line">    &lt;/feComponentTransfer&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">     &lt;feGaussianBlur stdDeviation="1"/&gt;</span><br><span class="line">    &lt;feComposite operator="in" in="SourceGraphic" result="overlay"/&gt;</span><br><span class="line"></span><br><span class="line">    &lt;feImage xlink:href="https://ykob.github.io/glsl-dissolve/img/osaka02.jpg" width="800" height="600" result="underlay"/&gt;</span><br><span class="line">    &lt;feComposite operator="over" in="overlay" in2="underlay"/&gt;</span><br><span class="line">  &lt;/filter&gt;</span><br><span class="line">  &lt;/defs&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  &lt;image filter="url(#turbulent-dissolve)" width="800" height="600" xlink:href="https://ykob.github.io/glsl-dissolve/img/osaka01.jpg"/&gt;</span><br><span class="line"></span><br><span class="line">&lt;/svg&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="一种好看的图片效果"><a href="#一种好看的图片效果" class="headerlink" title="一种好看的图片效果"></a>一种好看的图片效果</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br></pre></td><td class="code"><pre><span class="line">html &#123;</span><br><span class="line">  height: <span class="number">100</span>%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">body &#123;</span><br><span class="line">  background: silver;</span><br><span class="line">  margin: <span class="number">0</span>;</span><br><span class="line">  padding: <span class="number">0</span>;</span><br><span class="line">  <span class="comment">//overflow: hidden;</span></span><br><span class="line">  height: <span class="number">100</span>%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">svg &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  position: absolute;</span><br><span class="line">  top: <span class="number">0</span>;</span><br><span class="line">  left: <span class="number">0</span>;</span><br><span class="line">  width: <span class="number">100</span>%;</span><br><span class="line">  height: <span class="number">100</span>%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.banner &#123;</span><br><span class="line">  height: <span class="number">350</span>px;</span><br><span class="line">  outline: <span class="number">1</span>px yellow dashed;</span><br><span class="line">  margin: <span class="number">2</span>em <span class="number">5</span>% <span class="number">0</span>;</span><br><span class="line">  text-align: center;</span><br><span class="line">  font-family: <span class="string">'Raleway'</span>, sans-serif;</span><br><span class="line">  font-weight: <span class="number">300</span>;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">  position: relative;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.textcontainer &#123;</span><br><span class="line">  background: rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">25</span>, <span class="number">0</span>);</span><br><span class="line">  font-size: <span class="number">3</span>em;</span><br><span class="line">  padding: <span class="number">.5</span>em <span class="number">0</span>;</span><br><span class="line">  position: relative;</span><br><span class="line">  z-index: <span class="number">1000</span>;</span><br><span class="line">  line-height: <span class="number">.5</span>em;</span><br><span class="line">  letter-spacing: <span class="number">2</span>px;</span><br><span class="line">  color: rgba(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">1</span>);</span><br><span class="line">  top: <span class="number">1.5</span>em;</span><br><span class="line">  width: <span class="number">100</span>%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">h1 &#123;</span><br><span class="line">  font-size: <span class="number">1</span>em;</span><br><span class="line">  line-height: <span class="number">1.5</span>em;</span><br><span class="line">  font-weight: <span class="number">400</span>;</span><br><span class="line">  margin: <span class="number">0</span>;</span><br><span class="line">  z-index: <span class="number">100</span>;</span><br><span class="line">  text-shadow: <span class="number">0</span> <span class="number">0</span> <span class="number">8</span>px rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">.3</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.byline &#123;</span><br><span class="line">  font-size: <span class="number">.3</span>em;</span><br><span class="line">  line-height: <span class="number">1.5</span>em;</span><br><span class="line">  font-family: Merriweather;</span><br><span class="line">  margin: <span class="number">.75</span>em;</span><br><span class="line">  z-index: <span class="number">100</span>;</span><br><span class="line">  text-shadow: <span class="number">0</span> <span class="number">0</span> <span class="number">8</span>px rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">.3</span>);</span><br><span class="line">&#125;</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=<span class="string">"utf-8"</span>&gt;</span><br><span class="line">  &lt;title&gt;JS Bin&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;section <span class="class"><span class="keyword">class</span></span>=<span class="string">"banner"</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;svg xmlns=<span class="string">"http://www.w3.org/2000/svg"</span> xmlns:xlink=<span class="string">"http://www.w3.org/1999/xlink"</span>&gt;</span><br><span class="line"></span><br><span class="line">  &lt;defs&gt;</span><br><span class="line">          &lt;filter id=<span class="string">"blurlayer2"</span> width=<span class="string">"120%"</span> height=<span class="string">"100%"</span>&gt;</span><br><span class="line">            &lt;feColorMatrix <span class="keyword">in</span>=<span class="string">"SourceGraphic"</span></span><br><span class="line">    type=<span class="string">"matrix"</span></span><br><span class="line">    values=<span class="string">".7    0   0   0   0</span></span><br><span class="line"><span class="string">            -0.2   .7   0   0   0</span></span><br><span class="line"><span class="string">            -.3    0   .7   0   0</span></span><br><span class="line"><span class="string">            0    0   0    1   0 "</span> /&gt;</span><br><span class="line"></span><br><span class="line">            &lt;feGaussianBlur  stdDeviation=<span class="string">"4"</span> result=<span class="string">"blur"</span>/&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            &lt;feImage id=<span class="string">"feimage"</span> xlink:href=<span class="string">"data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0iMTAyNCIgaGVpZ2h0PSIzMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQoNCiA8Zz4NCiAgPHRpdGxlPmJhY2tncm91bmQ8L3RpdGxlPg0KICA8cmVjdCBmaWxsPSJub25lIiBpZD0iY2FudmFzX2JhY2tncm91bmQiIGhlaWdodD0iNDAyIiB3aWR0aD0iNTgyIiB5PSItMSIgeD0iLTEiLz4NCiA8L2c+DQogPGc+DQogIDx0aXRsZT5MYXllciAxPC90aXRsZT4NCiAgPHBhdGggaWQ9InN2Z18zIiBkPSJtNTEwLDMwMGMtMSwwIC01MDgsLTMgLTUwOCwtM2w1MDgsM3oiIGZpbGwtb3BhY2l0eT0ibnVsbCIgc3Ryb2tlLW9wYWNpdHk9Im51bGwiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2U9Im51bGwiIGZpbGw9IiMwMDAiLz4NCiAgPHBhdGggaWQ9InN2Z181IiBkPSJtMTEuOTQ1LDI5Mi40Njc0OWwwLC0yODQuOTk5OTlsMzE0LDI4NC45OTk5OWwtMzE0LDB6IiBmaWxsLW9wYWNpdHk9Im51bGwiIHN0cm9rZS1vcGFjaXR5PSJudWxsIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlPSJudWxsIiBmaWxsPSIjMDAwIi8+DQogIDxwYXRoIGlkPSJzdmdfNiIgZD0ibTIwMS41NSwxNDIuOTIyNWwxNDUuNDk5OTksLTEzNS41bDE0NS40OTk5OSwxMzUuNWwtMTQ1LjQ5OTk5LDEzNS41bC0xNDUuNDk5OTksLTEzNS41eiIgZmlsbC1vcGFjaXR5PSJudWxsIiBzdHJva2Utb3BhY2l0eT0ibnVsbCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZT0ibnVsbCIgZmlsbD0iIzAwMCIvPg0KICA8cGF0aCB0cmFuc2Zvcm09InJvdGF0ZSgtMTgwIDU0Mi45NDUwMDczMjQyMTg4LDE1MC45Njc0OTg3NzkyOTY4OCkgIiBpZD0ic3ZnXzciIGQ9Im0zODUuOTQ1LDI5My40Njc0OWwwLC0yODQuOTk5OTlsMzE0LDI4NC45OTk5OWwtMzE0LDB6IiBmaWxsLW9wYWNpdHk9Im51bGwiIHN0cm9rZS1vcGFjaXR5PSJudWxsIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlPSJudWxsIiBmaWxsPSIjMDAwIi8+DQogIDxwYXRoIGlkPSJzdmdfMiIgZD0ibTcwMC4yMzU2NSwyOTIuNDY3NDlsMCwtMjg0Ljk5OTk5bDMxNCwyODQuOTk5OTlsLTMxNCwweiIgZmlsbC1vcGFjaXR5PSJudWxsIiBzdHJva2Utb3BhY2l0eT0ibnVsbCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZT0ibnVsbCIgZmlsbD0iIzAwMCIvPg0KIDwvZz4NCjwvc3ZnPg=="</span> x=<span class="string">"0%"</span> y=<span class="string">"0%"</span> width=<span class="string">"100%"</span> height=<span class="string">"100%"</span> result=<span class="string">"imgmask"</span> preserveAspectRatio=<span class="string">"none"</span>/&gt;</span><br><span class="line"></span><br><span class="line">              &lt;feComposite <span class="keyword">in</span>=<span class="string">"blur"</span> in2=<span class="string">"imgmask"</span>   operator=<span class="string">"in"</span> result=<span class="string">"comp"</span> /&gt;</span><br><span class="line"></span><br><span class="line">            &lt;feMerge result=<span class="string">"merge"</span>&gt;</span><br><span class="line">              &lt;feMergeNode <span class="keyword">in</span>=<span class="string">"SourceGraphic"</span> /&gt;--&gt;</span><br><span class="line">              &lt;feMergeNode <span class="keyword">in</span>=<span class="string">"comp"</span> /&gt;</span><br><span class="line">              &lt;!--<span class="xml"><span class="tag">&lt;<span class="name">feMergeNode</span> <span class="attr">in</span>=<span class="string">"comp2"</span> /&gt;</span>--&gt;</span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;/<span class="name">feMerge</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">          &lt;<span class="regexp">/filter&gt;</span></span><br><span class="line"><span class="regexp">        &lt;/</span>defs&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> &lt;image filter=<span class="string">"url(#blurlayer2)"</span> x=<span class="string">"0"</span> width=<span class="string">"100%"</span> height=<span class="string">"100%"</span> xlink:href=<span class="string">"https://snag.gy/mizAPp.jpg"</span> /&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;<span class="regexp">/svg&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">  &lt;div class="textcontainer"&gt;</span></span><br><span class="line"><span class="regexp">  &lt;h1&gt;The Outdoors Company&lt;/</span>h1&gt;</span><br><span class="line">    &lt;p <span class="class"><span class="keyword">class</span></span>=<span class="string">"byline "</span>&gt;Run. Spot. Run.&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>div&gt;</span><br><span class="line"></span><br><span class="line">&lt;<span class="regexp">/section&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>body&gt;</span><br><span class="line">&lt;<span class="regexp">/html&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="噪音图片效果"><a href="#噪音图片效果" class="headerlink" title="噪音图片效果"></a>噪音图片效果</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> bfx = <span class="built_in">document</span>.getElementById(<span class="string">"bfx"</span>),</span><br><span class="line">    bfy = <span class="built_in">document</span>.getElementById(<span class="string">"bfy"</span>),</span><br><span class="line">    bFSVG = <span class="built_in">document</span>.querySelector(<span class="string">"svg"</span>),</span><br><span class="line">    effect = bFSVG.querySelector(<span class="string">"feTurbulence"</span>);</span><br><span class="line"></span><br><span class="line">  bfx.addEventListener(<span class="string">"change"</span>, updateBF);</span><br><span class="line">  bfx.addEventListener(<span class="string">"keyup"</span>, updateBF);</span><br><span class="line">  bfy.addEventListener(<span class="string">"change"</span>, updateBF);</span><br><span class="line">  bfy.addEventListener(<span class="string">"keyup"</span>, updateBF);</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">updateBF</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> vx = bfx.value,</span><br><span class="line">      vy = bfy.value;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> val = vx + <span class="string">" "</span> + vy;</span><br><span class="line"></span><br><span class="line">    effect.setAttribute(<span class="string">"baseFrequency"</span>, val);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">"Yanone Kaffeesatz"</span>, sans-serif;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#212121</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">1.5em</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">svg</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">1em</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type="text"]</span> &#123;</span><br><span class="line">  <span class="attribute">max-width</span>: <span class="number">70px</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">1em</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0.2em</span>;</span><br><span class="line">  <span class="attribute">font-family</span>: inherit;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">label</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">1.5em</span>;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">margin-bottom</span>: <span class="number">1em</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.wrapper</span> &#123;</span><br><span class="line">  <span class="attribute">max-width</span>: <span class="number">80%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=<span class="string">"utf-8"</span>&gt;</span><br><span class="line">  &lt;title&gt;JS Bin&lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"wrapper"</span>&gt;</span><br><span class="line">	baseFrequency = <span class="string">"&lt;input type="</span>text<span class="string">" value="</span><span class="number">0.01</span><span class="string">" name="</span>bfx<span class="string">" id="</span>bfx<span class="string">" aria-label="</span>baseFrequency-x<span class="string">" /&gt;</span></span><br><span class="line"><span class="string">	&lt;input type="</span>text<span class="string">" value="</span><span class="number">0.4</span><span class="string">" steps="</span><span class="number">0.1</span><span class="string">" name="</span>bfy<span class="string">" id="</span>bfy<span class="string">" aria-label="</span>baseFrequency-y<span class="string">" /&gt;</span></span><br><span class="line"><span class="string">	"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;svg viewBox=<span class="string">"0 0 180 100"</span>&gt;</span><br><span class="line">  &lt;filter id=<span class="string">'noise'</span> x=<span class="string">'0%'</span> y=<span class="string">'0%'</span> width=<span class="string">'100%'</span> height=<span class="string">'100%'</span>&gt;</span><br><span class="line">      &lt;feTurbulence</span><br><span class="line">                    type=<span class="string">"fractalNoise"</span> baseFrequency=<span class="string">"0.01 0.4"</span> result=<span class="string">"NOISE"</span> numOctaves=<span class="string">"1"</span>/&gt;</span><br><span class="line">     &lt;feDisplacementMap <span class="keyword">in</span>=<span class="string">"SourceGraphic"</span> in2=<span class="string">"NOISE"</span> scale=<span class="string">"20"</span> xChannelSelector=<span class="string">"R"</span> yChannelSelector=<span class="string">"R"</span> /&gt;<span class="xml"><span class="tag">&lt;/<span class="name">feDisplacementMap</span>&gt;</span></span></span><br><span class="line">    &lt;!--<span class="xml"><span class="tag">&lt;<span class="name">feComposite</span> <span class="attr">operator</span>=<span class="string">"in"</span> <span class="attr">in</span>=<span class="string">"SourceGraphic"</span> <span class="attr">in2</span>=<span class="string">"NOISE"</span> /&gt;</span> --&gt;</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">filter</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	&lt;image xlink:href=<span class="string">"https://images.unsplash.com/photo-1546207438-5685e45838d7?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ"</span> x=<span class="string">"0"</span> y=<span class="string">"0"</span> width=<span class="string">"100%"</span> height=<span class="string">"100%"</span> filter=<span class="string">"url(#noise)"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">&lt;<span class="regexp">/svg&gt;</span></span><br><span class="line"><span class="regexp">	&lt;/</span>div&gt;</span><br><span class="line">&lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>html&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="上述花朵的-svg-代码"><a href="#上述花朵的-svg-代码" class="headerlink" title="上述花朵的 svg 代码"></a>上述花朵的 svg 代码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">&lt;svg viewBox=<span class="string">"0 0 1024 1024"</span> version=<span class="string">"1.1"</span> width=<span class="string">"200"</span> height=<span class="string">"200"</span> style=<span class="string">"border:1px solid #ccc"</span>&gt;</span><br><span class="line">  &lt;defs&gt;</span><br><span class="line">    &lt;filter id=<span class="string">"flower-shadow"</span>&gt;</span><br><span class="line">      &lt;feGaussianBlur <span class="keyword">in</span>=<span class="string">"SourceAlpha"</span> stdDeviation=<span class="string">"20"</span> result=<span class="string">"blur"</span> /&gt;</span><br><span class="line">      &lt;feMerge&gt;</span><br><span class="line">        &lt;feMergeNode <span class="keyword">in</span>=<span class="string">"blur"</span> /&gt;</span><br><span class="line">        &lt;feMergeNode <span class="keyword">in</span>=<span class="string">"SourceGraphic"</span> /&gt;</span><br><span class="line">      &lt;<span class="regexp">/feMerge&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>filter&gt;</span><br><span class="line">  &lt;<span class="regexp">/defs&gt;</span></span><br><span class="line"><span class="regexp">  &lt;g filter="url(#flower-shadow)"&gt;</span></span><br><span class="line"><span class="regexp">    &lt;path</span></span><br><span class="line"><span class="regexp">      d="M512.144 986.56a30.728 30.728 0 0 1-30.752-30.752V693.152a30.736 30.736 0 1 1 61.488 0v262.664a30.72 30.72 0 0 1-30.736 30.744z"</span></span><br><span class="line"><span class="regexp">      fill="#0092D2"</span></span><br><span class="line"><span class="regexp">      p-id="6296"</span></span><br><span class="line"><span class="regexp">    &gt;&lt;/</span>path&gt;</span><br><span class="line">    &lt;path</span><br><span class="line">      d=<span class="string">"M511.664 1008a30.728 30.728 0 0 1-30.752-30.752c0-119.408-167.52-220.312-365.824-220.312-17 0-30.752-13.752-30.752-30.752s13.76-30.76 30.752-30.76c239.632 0 427.304 123.8 427.304 281.824A30.72 30.72 0 0 1 511.664 1008z"</span></span><br><span class="line">      fill=<span class="string">"#0092D2"</span></span><br><span class="line">      p-id=<span class="string">"6297"</span></span><br><span class="line">    &gt;<span class="xml"><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span></span><br><span class="line">    &lt;path</span><br><span class="line">      d=<span class="string">"M512.32 1008a30.728 30.728 0 0 1-30.752-30.752c0-158.024 187.744-281.824 427.336-281.824 17 0 30.752 13.76 30.752 30.76s-13.752 30.752-30.752 30.752c-198.264 0-365.84 100.904-365.84 220.312A30.736 30.736 0 0 1 512.32 1008z"</span></span><br><span class="line">      fill=<span class="string">"#0092D2"</span></span><br><span class="line">      p-id=<span class="string">"6298"</span></span><br><span class="line">    &gt;<span class="xml"><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span></span><br><span class="line">    &lt;path</span><br><span class="line">      d=<span class="string">"M908.904 695.432c-157.304 0-291.848 53.576-366.032 134.968V693.152a30.736 30.736 0 0 0-30.736-30.76c-1.352 0-2.52 0.608-3.84 0.792v344.168c1.168 0.12 2.168 0.656 3.36 0.656 0.12 0 0.208-0.064 0.336-0.064 0.12 0 0.208 0.064 0.328 0.064a30.736 30.736 0 0 0 30.744-30.752c0-119.408 167.576-220.312 365.84-220.312 17 0 30.752-13.752 30.752-30.752s-13.752-30.76-30.752-30.76z"</span></span><br><span class="line">      fill=<span class="string">"#0085BF"</span></span><br><span class="line">      p-id=<span class="string">"6299"</span></span><br><span class="line">    &gt;<span class="xml"><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span></span><br><span class="line">    &lt;path</span><br><span class="line">      d=<span class="string">"M253.744 247.248c-43.848 0-79.336 47.72-79.336 106.648 0 37.992 14.8 71.384 37.056 90.28 12.248 10.336 26.728 16.368 42.28 16.368l0.36-0.36c-31 30.96-22.344 89.904 19.312 131.528 26.848 26.904 60.936 40 90.04 37.6 15.944-1.392 30.48-7.336 41.472-18.328l0.184 0.432c0.024 43.784 47.808 79.336 106.672 79.336 38.072 0 71.336-14.888 90.256-37.12 10.336-12.248 16.408-26.728 16.408-42.28h0.056c10.992 11.048 25.52 17 41.448 18.376 29.136 2.344 63.176-10.752 90.096-37.664 41.624-41.624 50.272-100.528 19.28-131.52l0.896 0.088c15.56 0.032 30.032-6.032 42.28-16.336 22.288-18.92 37.064-52.28 37.064-90.272 0-58.896-35.496-106.672-79.344-106.672l0.424-0.504c10.992-11 16.936-25.504 18.32-41.416 2.344-29.136-10.752-63.216-37.6-90.072C709.68 73.688 650.816 65.008 619.824 96v-0.664C619.824 51.496 572.072 16 513.16 16c-37.992 0-71.384 14.808-90.24 37.064-10.36 12.248-16.4 26.728-16.4 42.28l-0.752-0.176c-30.992-30.96-90.936-21.144-132.56 20.544-26.848 26.848-40 60.936-37.632 90.032 1.352 15.92 7.328 30.456 18.32 41.416l-0.152 0.088z"</span></span><br><span class="line">      fill=<span class="string">"#F5B146"</span></span><br><span class="line">      p-id=<span class="string">"6300"</span></span><br><span class="line">    &gt;<span class="xml"><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span></span><br><span class="line">    &lt;path</span><br><span class="line">      d=<span class="string">"M508.296 690.448c1.168 0.064 2.28 0.296 3.488 0.296 10.456 0 20.408-1.32 29.952-3.424 0.304-0.064 0.608-0.24 0.904-0.304 6.424-1.44 12.552-3.296 18.384-5.576 2.936-1.152 5.64-2.52 8.408-3.848a106.68 106.68 0 0 0 11.888-6.544c2.04-1.312 4.152-2.64 6.072-4.08 5.4-4.088 10.504-8.408 14.648-13.336 10.336-12.248 16.408-26.728 16.408-42.28h0.056c10.992 11.048 25.52 17 41.448 18.376 29.136 2.344 63.176-10.752 90.096-37.664 41.624-41.624 50.272-100.528 19.28-131.52l0.896 0.088c15.56 0.032 30.032-6.032 42.28-16.336 22.288-18.92 37.064-52.28 37.064-90.272 0-58.896-35.496-106.672-79.344-106.672l0.424-0.504c10.992-11 16.936-25.504 18.32-41.416 2.344-29.136-10.752-63.216-37.6-90.072C709.68 73.688 650.816 65.008 619.824 96v-0.664C619.824 51.496 572.072 16 513.16 16c-1.68 0-3.208 0.424-4.864 0.488v673.96z"</span></span><br><span class="line">      fill=<span class="string">"#EDA02F"</span></span><br><span class="line">      p-id=<span class="string">"6301"</span></span><br><span class="line">    &gt;<span class="xml"><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span></span><br><span class="line">    &lt;path</span><br><span class="line">      d=<span class="string">"M512 353.384m-80.736 0a80.736 80.736 0 1 0 161.472 0 80.736 80.736 0 1 0-161.472 0Z"</span></span><br><span class="line">      fill=<span class="string">"#E5226B"</span></span><br><span class="line">      p-id=<span class="string">"6302"</span></span><br><span class="line">    &gt;<span class="xml"><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span></span><br><span class="line">    &lt;path</span><br><span class="line">      d=<span class="string">"M508.296 273.008v160.736c1.264 0.032 2.432 0.36 3.696 0.36 44.576 0 80.744-36.128 80.744-80.72 0-44.6-36.168-80.728-80.744-80.728-1.264 0-2.432 0.328-3.696 0.352z"</span></span><br><span class="line">      fill=<span class="string">"#C9005B"</span></span><br><span class="line">      p-id=<span class="string">"6303"</span></span><br><span class="line">    &gt;<span class="xml"><span class="tag">&lt;/<span class="name">path</span>&gt;</span></span></span><br><span class="line">  &lt;<span class="regexp">/g&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>svg&gt;</span><br></pre></td></tr></table></figure>
+
+					
+				</div>
+			</div>
+		</article>
+
+		<ul class="am-pagination">
+    
+	
+		<li class="am-pagination-next">
+		<a class="pull-right" href="/2019/08/28/RxJS培训/" title="Rxjs">
+			下一篇 &raquo;
+		</a>
+		</li>
+	 
+ </ul>
+        
+
+		<div class="theme-annie-comment-button-container">
+	<button id="annie-comment-button" class="theme-annie-comment-button" onclick="Annie_Comment()">
+		加载评论
+		<!--加载评论-->
+	</button>
+</div>
+
+<div id="annie-comment-container" class="theme-annie-comment-main-container">
+
+	
+		
+			<!-- comment valine -->
+			<!-- show valine comment -->
+<div id="valineComment" class="comment"></div>
+
+<!-- valine`s js & css -->
+<script>
+	window.jQuery || document.write('<script src="/js/jquery-2.1.1.min.js"><\/script>')
+</script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/js/valine.min.js"></script>
+<link rel="stylesheet" href="/css/comment.css">
+
+<script>
+	var checkExistComment = setInterval(function() {
+		if( $('#valineComment').length ) {
+			new Valine({
+				// AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+				av: AV,
+				//使用id寻找div元素（使用class可能找不到）
+				el: '#valineComment',
+				emoticon_url: 'https://cloud.panjunwen.com/alu',
+				emoticon_list: ["吐.png", "期待.png", "高兴.png", "吐血倒地.png", "哭泣.png", "欢呼.png"],
+				app_id: "3333....", //获取APP ID
+				app_key: "3333......", //获取APP KEY
+				placeholder: "no any!", //评论框占位提示文字        			
+			});
+			clearInterval(checkExistComment);
+		}
+	}, 100);
+</script>
+		
+	
+
+</div>
+
+<script type="text/javascript">
+	/* Show Comment */
+	var Annie_Comment = function() {
+		function Show_Hidden(obj) {
+			obj.style.display = 'block';
+		}
+		
+		//var obutton = $('#annie-comment-button');
+		//var obutton = $('#annie-comment-container');
+		var obutton = document.getElementById("annie-comment-button" || "0");
+		var odiv = document.getElementById("annie-comment-container");
+		if( 'obutton' ) {
+			obutton.onclick = function() {
+				Show_Hidden(odiv);
+				$("#annie-comment-button").css("display", 'none');
+				return false;
+			}
+		}
+	};
+
+	(function Annie_Init() {
+		Annie_Comment();
+	})();
+</script>
+		
+		<!--
+	时间：2018-09-24
+	描述：The TOC module refers to 'https://github.com/codefine/hexo-theme-mellow', include toc.ejs、toc.js、toc.css. All rights reserved by codefine. 
+-->
+
+	
+		<aside class="post-widget">
+			<nav class="post-toc-wrap" id="post-toc">
+				
+					<strong>文章目录</strong>
+				
+				
+				<!--toc(post.content)-->
+				<ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#svg-滤镜相关知识"><span class="post-toc-text">svg 滤镜相关知识</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一些背景"><span class="post-toc-text">一些背景</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一些定义"><span class="post-toc-text">一些定义</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#用一朵发来测试这些滤镜基元"><span class="post-toc-text">用一朵发来测试这些滤镜基元</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#feGaussianBlur"><span class="post-toc-text">feGaussianBlur</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#feOffset"><span class="post-toc-text">feOffset</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#feColorMatrix"><span class="post-toc-text">feColorMatrix</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#feImage"><span class="post-toc-text">feImage</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#feComposite"><span class="post-toc-text">feComposite</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#feDisplacementMap"><span class="post-toc-text">feDisplacementMap</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#feTurbulence"><span class="post-toc-text">feTurbulence</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#用滤镜营造内外边框等效果"><span class="post-toc-text">用滤镜营造内外边框等效果</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#给-path-text-等加上外部的-stroke-效果，可用于-path-的线-stroke-外面还想加上-stroke-使-hover-效果更明显"><span class="post-toc-text">给 path,text 等加上外部的 stroke 效果，可用于 path 的线 stroke 外面还想加上 stroke 使 hover 效果更明显</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#给-path-text-加上内部-stroke-的效果"><span class="post-toc-text">给 path,text 加上内部 stroke 的效果</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#给-path-加上内部发光的效果"><span class="post-toc-text">给 path 加上内部发光的效果</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#feComponentTransfer"><span class="post-toc-text">feComponentTransfer</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一种图片切换的效果"><span class="post-toc-text">一种图片切换的效果</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一种好看的图片效果"><span class="post-toc-text">一种好看的图片效果</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#噪音图片效果"><span class="post-toc-text">噪音图片效果</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#上述花朵的-svg-代码"><span class="post-toc-text">上述花朵的 svg 代码</span></a></li></ol></li></ol></li></ol>
+			</nav>
+			<div class="post-toc-bar"><div>
+		</aside>
+	
+
+	</div>
+</div>
+		</div>
+		</main>
+		
+		<!--footer-->
+		<footer>
+	<div class="blog-text-center">
+		<div class="theme-annie-social">
+				
+				
+					<a href="https://github.com/LeMorlalala" title="Github" target="_blank"><i class="fa fa-github"></i>&nbsp;</a>
+					
+				
+					
+					
+						
+				
+		</div>
+	</div>
+
+	<div  class="blog-text-center">
+		<div class="theme-annie-copyright">
+			
+				&copy; 2018 - 2019, content by 大兰兰. All Rights Reserved.			       	
+			
+		</div>
+	</div>
+
+	<div class="blog-text-center">
+		<div class="theme-annie-copyright">
+			<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.		
+		</div>
+	</div>
+</footer>
+		<!-- <script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script> -->
+
+<script>
+	window.jQuery || document.write('<script src="/js/jquery-2.1.1.min.js"><\/script>')
+</script>
+
+<style>
+	.motto {
+		color: #000000;
+		font-size: 20px;
+		margin: 100px 25% 0;
+		width: 50%;
+		line-height: 1.4;
+		font-family:"KaiTi", "STXingkai", "Source Sans Pro", "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif;
+		text-align: center;
+	}
+	@media(max-width: 890px) {
+		.motto {	
+			margin: 100px 10% 0;
+			width: 80%;
+		}
+	}
+	@media(max-width: 890px) {
+		.motto {
+			margin: 100px 5% 0;
+			width: 90%;
+		}
+	}
+</style>
+
+
+	<script src="/js/motto.js"></script>
+	<script type="text/javascript">
+		$(".motto").html(getMingYanContent());
+	</script>	
+
+
+
+
+
+	<script type="text/javascript" src="/js/love.js"></script>
+
+
+
+	<script type="text/javascript" src="/js/toc.js"></script>
+
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript">
+	//generate a random img that pre_name 'from 0 to 110'
+	var random_bg = Math.floor(Math.random() * 109 + 1);
+
+	//var bg = 'url(/img/random/' + random_bg + '.jpg)';		
+	var bg = 'url(https://XXX-youname-XXX.github.io/Random-img/' + random_bg + '.jpg)';
+
+	$("#header-bg-2").css("background-image", bg);
+</script>
+		
+		<!--back to top-->
+        <style type="text/css">
+	#totop {
+		background: white;
+		border-radius: 50%;
+		position: fixed;
+		right: 5.4%;
+		bottom: 80px;
+		cursor: pointer;
+	}
+	
+	#totop a {
+		color: #474747;
+		background-color: transparent;
+		padding: 10px;
+		text-decoration: none;
+	}
+	
+	@media(max-width:512px) {
+		#totop {
+			display: none;
+			visibility: hidden;
+		}
+	}
+</style>
+
+
+	<div id="totop">
+  		<a href="javascript:;" class="fa fa-arrow-up"></a>
+	</div>
+
+	<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"scale":1,"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"superSample":2,"position":"right","width":160,"height":320},"mobile":{"show":true},"react":{"opacityDefault":1,"opacityOnHover":1},"log":false});</script></body>
+	</html>
+
